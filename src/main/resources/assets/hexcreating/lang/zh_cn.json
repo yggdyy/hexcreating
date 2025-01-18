@@ -1,0 +1,17 @@
+{
+  "mishaps.need_blaze_burner_with_blaze": "内含烈焰人的烈焰人燃烧室",
+  "mishaps.need_blaze_burner": "烈焰人燃烧室",
+  "hexcasting.action.hexcreating:kelvin_heat_gambit": "开尔文之策略-Δ",
+  "hexcasting.action.hexcreating:kelvin_super_heat_gambit": "开尔文之策略-高温",
+  "hexcasting.action.hexcreating:kelvin_time_purification": "开尔文之纯化-时间",
+  "hexcasting.action.hexcreating:kelvin_type_purification": "开尔文之纯化-热量",
+  "hexcasting.action.hexcreating:pascal_time_purification": "帕斯卡之纯化-时间",
+  "hexcasting.action.hexcreating:kinetic_rotation_purification": "动力之纯化-旋转",
+  "hexcasting.action.hexcreating:kinetic_network_stress_all_purification": "动力之纯化-网络总应力",
+  "hexcasting.action.hexcreating:kinetic_network_stress_purification": "动力之纯化-网络消耗应力",
+  "block.hexcreating.analytical_engine_controller": "分析机控制单元",
+  "block.hexcreating.analytical_engine_alu": "分析机计算单元",
+  "block.hexcreating.analytical_engine_kinetic_interface": "分析机动力单元",
+  "block.hexcreating.iota_reader": "Iota读取器",
+  "block.hexcreating.iota_writer": "Iota写入器"
+}

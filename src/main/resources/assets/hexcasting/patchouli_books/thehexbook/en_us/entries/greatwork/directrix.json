@@ -1,0 +1,33 @@
+{
+  "name": "hexcasting.entry.directrix",
+  "category": "hexcasting:greatwork",
+  "icon": "hexcasting:directrix/redstone",
+  "advancement": "hexcasting:enlightenment",
+  "entry_color": "54398a",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "hexcasting.page.directrix.1"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "hexcasting.page.directrix.2"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "hexcasting:directrix/empty",
+      "text": "hexcasting.page.directrix.empty_directrix"
+    },
+    {
+      "type": "hexcasting:brainsweep",
+      "recipe": "hexcasting:brainsweep/directrix_redstone",
+      "text": "hexcasting.page.directrix.directrix_redstone"
+    },
+    {
+      "type": "hexcasting:brainsweep",
+      "recipe": "hexcasting:brainsweep/directrix_boolean",
+      "text": "hexcasting.page.directrix.directrix_boolean"
+    }
+  ]
+}

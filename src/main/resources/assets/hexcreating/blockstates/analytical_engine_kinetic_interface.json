@@ -1,0 +1,52 @@
+{
+    "variants": {
+        "render_stage=0,facing=south": {
+            "model": "hexcreating:block/analytical_engine_kinetic_interface_1", 
+            "y": 180
+        }, 
+        "render_stage=1,facing=south": {
+            "model": "hexcreating:block/analytical_engine_kinetic_interface_2", 
+            "y": 180
+        }, 
+        "render_stage=0,facing=north": {
+            "model": "hexcreating:block/analytical_engine_kinetic_interface_1", 
+            "y": 0
+        }, 
+        "render_stage=1,facing=north": {
+            "model": "hexcreating:block/analytical_engine_kinetic_interface_2", 
+            "y": 0
+        }, 
+        "render_stage=0,facing=east": {
+            "model": "hexcreating:block/analytical_engine_kinetic_interface_1", 
+            "y": 90
+        }, 
+        "render_stage=1,facing=east": {
+            "model": "hexcreating:block/analytical_engine_kinetic_interface_2", 
+            "y": 90
+        }, 
+        "render_stage=0,facing=west": {
+            "model": "hexcreating:block/analytical_engine_kinetic_interface_1", 
+            "y": 270
+        }, 
+        "render_stage=1,facing=west": {
+            "model": "hexcreating:block/analytical_engine_kinetic_interface_2", 
+            "y": 270
+        }, 
+        "render_stage=0,facing=up": {
+            "model": "hexcreating:block/analytical_engine_kinetic_interface_1", 
+            "x": 270
+        }, 
+        "render_stage=1,facing=up": {
+            "model": "hexcreating:block/analytical_engine_kinetic_interface_2", 
+            "x": 270
+        }, 
+        "render_stage=0,facing=down": {
+            "model": "hexcreating:block/analytical_engine_kinetic_interface_1", 
+            "x": 90
+        }, 
+        "render_stage=1,facing=down": {
+            "model": "hexcreating:block/analytical_engine_kinetic_interface_2", 
+            "x": 90
+        }
+    }
+}

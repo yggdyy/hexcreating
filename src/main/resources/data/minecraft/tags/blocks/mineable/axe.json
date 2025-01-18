@@ -1,0 +1,8 @@
+{
+    "replace": false,
+    "values": [
+      "hexcreating:analytical_engine_controller", 
+      "hexcreating:analytical_engine_alu", 
+      "hexcreating:analytical_engine_kinetic_interface"
+    ]
+}

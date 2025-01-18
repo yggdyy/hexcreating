@@ -1,0 +1,18 @@
+{
+    "variants": {
+        "facing=north": {
+            "model": "hexcreating:block/iota_reader"
+        }, 
+        "facing=south": {
+            "model": "hexcreating:block/iota_reader"
+        }, 
+        "facing=west": {
+            "model": "hexcreating:block/iota_reader",
+            "y": 90
+        }, 
+        "facing=east": {
+            "model": "hexcreating:block/iota_reader", 
+            "y": 90
+        }
+    }
+}

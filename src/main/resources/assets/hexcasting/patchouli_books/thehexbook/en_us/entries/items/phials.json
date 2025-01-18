@@ -1,0 +1,28 @@
+{
+  "name": "hexcasting.entry.phials",
+  "category": "hexcasting:items",
+  "icon": "hexcasting:battery",
+  "sortnum": 7,
+  "advancement": "hexcasting:root",
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "hexcasting.page.phials.1"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "hexcasting.page.phials.2"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "hexcasting.page.phials.3"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "text": "hexcasting.page.phials.desc",
+      "item": "hexcasting:battery{\"hexcasting:media\":640000,\"hexcasting:start_media\":640000}",
+      "link_recipe": true
+    }
+  ]
+}

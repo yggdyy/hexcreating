@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "hexcreating",
+	"version": "${version}",
+	"name": "HexCreating",
+	"description": "aaaaaaaaaaaaa~",
+	"authors": [
+		"yggdyy_"
+	],
+	"contact": {
+		"homepage": "*",
+		"sources": "*"
+	},
+	"license": "MIT",
+	"icon": "assets/hexcreating/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			{
+				"adapter": "kotlin",
+				"value": "pub.pigeon.yggdyy.hexcreating.HexcreatingMain"
+			}
+		],
+		"client": [
+			{
+				"value": "pub.pigeon.yggdyy.hexcreating.HexcreatingClient"
+			}
+		]
+	},
+	"depends": {
+		"minecraft": ">=1.20.1",
+		"fabricloader": ">=0.16.7",
+		"fabric-api": "*",
+		"fabric-language-kotlin": ">=1.10.10+kotlin.1.9.10",
+		"hexcasting": ">=0.11.1-7-pre-646",
+		"create": ">=0.5.1-f-build.1417+mc1.20.1"
+	},
+	"mixins": [
+		"hexcreating.mixins.json"
+	]
+}

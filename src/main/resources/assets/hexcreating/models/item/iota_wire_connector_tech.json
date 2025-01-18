@@ -1,0 +1,53 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "block/block",
+	"textures": {
+		"0": "hexcreating:item/iota_wire_connector_tech",
+		"particle": "hexcreating:item/iota_wire_connector_tech"
+	},
+	"elements": [
+		{
+			"name": "base",
+			"from": [6, 0, 6],
+			"to": [10, 1, 10],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 0, 7]},
+			"faces": {
+				"north": {"uv": [4, 9, 8, 10], "texture": "#0"},
+				"east": {"uv": [0, 9, 4, 10], "texture": "#0"},
+				"south": {"uv": [12, 9, 16, 10], "texture": "#0"},
+				"west": {"uv": [8, 9, 12, 10], "texture": "#0"},
+				"up": {"uv": [8, 9, 4, 5], "texture": "#0"},
+				"down": {"uv": [12, 5, 8, 9], "texture": "#0"}
+			}
+		},
+		{
+			"name": "head",
+			"from": [7, 1, 7],
+			"to": [9, 4, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 2, 7]},
+			"faces": {
+				"north": {"uv": [2, 12, 4, 15], "texture": "#0"},
+				"east": {"uv": [0, 12, 2, 15], "texture": "#0"},
+				"south": {"uv": [6, 12, 8, 15], "texture": "#0"},
+				"west": {"uv": [4, 12, 6, 15], "texture": "#0"},
+				"up": {"uv": [4, 12, 2, 10], "texture": "#0"},
+				"down": {"uv": [6, 10, 4, 12], "texture": "#0"}
+			}
+		},
+		{
+			"name": "base",
+			"from": [6, 2, 6],
+			"to": [10, 3, 10],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 2, 7]},
+			"faces": {
+				"north": {"uv": [4, 4, 8, 5], "texture": "#0"},
+				"east": {"uv": [0, 4, 4, 5], "texture": "#0"},
+				"south": {"uv": [12, 4, 16, 5], "texture": "#0"},
+				"west": {"uv": [8, 4, 12, 5], "texture": "#0"},
+				"up": {"uv": [8, 4, 4, 0], "texture": "#0"},
+				"down": {"uv": [12, 0, 8, 4], "texture": "#0"}
+			}
+		}
+	],
+	"display": {}
+}

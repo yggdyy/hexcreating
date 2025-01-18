@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "pub.pigeon.yggdyy.hexcreating.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": ["BlazeBurnerBlockEntityAccessor", "CircleExecutionStateInjector"],
+  "client": [],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

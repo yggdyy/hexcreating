@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "render_stage=0": {
+            "model": "hexcreating:block/analytical_engine_controller_1"
+        }, 
+        "render_stage=1": {
+            "model": "hexcreating:block/analytical_engine_controller_2"
+        }
+    }
+}
