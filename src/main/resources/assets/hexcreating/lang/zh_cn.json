@@ -13,5 +13,15 @@
   "block.hexcreating.analytical_engine_alu": "分析机计算单元",
   "block.hexcreating.analytical_engine_kinetic_interface": "分析机动力单元",
   "block.hexcreating.iota_reader": "Iota读取器",
-  "block.hexcreating.iota_writer": "Iota写入器"
+  "block.hexcreating.iota_writer": "Iota写入器",
+  "item.hexcreating.iota_wire": "Iota传输线",
+  "item.hexcreating.iota_wire_connector": "Iota传输线连接器",
+  "block.hexcreating.iota_wire_connector": "Iota传输线连接器",
+  "item.hexcreating.iota_wire_reel": "Iota传输线轴",
+  "item.hexcreating.empty_reel": "空线轴",
+  "hexcreating.iota_wire_reel.same": "选定的是同一个连接器!",
+  "hexcreating.iota_wire_reel.far": "两个连接器太远了!",
+  "hexcreating.iota_wire_reel.success": "成功",
+  "hexcreating.iota_wire_reel.fail": "失败",
+  "hexcreating.iota_wire_reel.unfinished": "未完成选定!"
 }

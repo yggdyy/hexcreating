@@ -57,6 +57,7 @@ public class IotaWireConnector {
 
     public void readNbt(NbtCompound nbt) {
         terminal.readNbt(nbt);
+        this.others = new ArrayList<>(List.of());
         int s = nbt.contains(getBaseNbtKey() + "others_length")? nbt.getInt(getBaseNbtKey() + "others_length") : 0;
         for(int i = 0; i < s; ++i) {
             String posKey = getBaseNbtKey() + "others_" + i + "_pos_";

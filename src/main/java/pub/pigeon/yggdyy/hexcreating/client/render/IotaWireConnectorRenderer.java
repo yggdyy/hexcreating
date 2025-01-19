@@ -20,10 +20,6 @@ public class IotaWireConnectorRenderer implements BlockEntityRenderer<IotaWireCo
         this.context = context;
     }
 
-    public IotaWireConnectorRenderer(WorldRenderContext context) {
-        
-    }
-
     @Override
     public void render(IotaWireConnectorBlockEntity blockEntity, float tickDelta, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int light, int overlay) {
         if(blockEntity.getWorld() == null) return;

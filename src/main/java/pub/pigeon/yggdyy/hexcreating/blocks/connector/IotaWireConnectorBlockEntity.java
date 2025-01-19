@@ -5,6 +5,8 @@ import com.simibubi.create.foundation.blockEntity.behaviour.BlockEntityBehaviour
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.network.ClientConnection;
+import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
@@ -78,6 +80,7 @@ public class IotaWireConnectorBlockEntity extends SmartBlockEntity implements II
         eastC.readNbt(tag);
     }
 
+    @Override
     public void sync() {
         this.markDirty();
         if (world != null) {
@@ -140,5 +143,16 @@ public class IotaWireConnectorBlockEntity extends SmartBlockEntity implements II
         if(state.get(IotaWireConnectorBlock.WEST)) ret.add(westC);
         if(state.get(IotaWireConnectorBlock.EAST)) ret.add(eastC);
         return ret;
+    }
+
+    @Override
+    public void onDataPacket(ClientConnection connection, BlockEntityUpdateS2CPacket packet) {
+        super.onDataPacket(connection, packet);
+        //this.read(packet.getNbt(), true);
+    }
+
+    @Override
+    public BlockEntityUpdateS2CPacket getUpdatePacket() {
+        return super.getUpdatePacket();
     }
 }

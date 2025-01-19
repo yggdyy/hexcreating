@@ -64,6 +64,8 @@ public class IotaWireProcessor {
                 c2.terminal.blockEntity.markDirty();
                 ((IIotaWireConnectorHost) c1.terminal.blockEntity).sync();
                 ((IIotaWireConnectorHost) c2.terminal.blockEntity).sync();
+                //world.updateListeners(pos1, world.getBlockState(pos1), world.getBlockState(pos1), 2);
+                //world.updateListeners(pos2, world.getBlockState(pos2), world.getBlockState(pos2), 2);
                 return true;
             }
         }
