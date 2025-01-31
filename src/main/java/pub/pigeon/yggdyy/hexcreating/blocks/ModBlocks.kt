@@ -12,6 +12,7 @@ import net.minecraft.util.Identifier
 import pub.pigeon.yggdyy.hexcreating.HexcreatingMain
 import pub.pigeon.yggdyy.hexcreating.blocks.analyticalengine.blocks.*
 import pub.pigeon.yggdyy.hexcreating.blocks.connector.IotaWireConnectorBlock
+import pub.pigeon.yggdyy.hexcreating.blocks.iotapackobserver.IotaPackObserverBlock
 import pub.pigeon.yggdyy.hexcreating.blocks.iotareader.IotaReaderBlock
 import pub.pigeon.yggdyy.hexcreating.blocks.iotawriter.IotaWriteBlock
 
@@ -24,6 +25,7 @@ object ModBlocks {
     val IOTA_READER: Block = register("iota_reader", IotaReaderBlock(AbstractBlock.Settings.copy(AllBlocks.MECHANICAL_PRESS.get())))
     val IOTA_WRITER: Block = register("iota_writer", IotaWriteBlock(AbstractBlock.Settings.copy(AllBlocks.MECHANICAL_PRESS.get())))
     val IOTA_WIRE_CONNECTOR: Block = register("iota_wire_connector", IotaWireConnectorBlock(AbstractBlock.Settings.copy(Blocks.MEDIUM_AMETHYST_BUD)), false)
+    val IOTA_PACK_OBSERVER: Block = register("iota_pack_observer", IotaPackObserverBlock(AbstractBlock.Settings.copy(Blocks.OBSERVER)))
 
     private fun register(name: String, block: Block, withItem: Boolean = true): Block {
         val id: Identifier = Identifier(HexcreatingMain.MOD_ID, name)
