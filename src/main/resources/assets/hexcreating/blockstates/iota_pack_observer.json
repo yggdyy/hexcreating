@@ -1,0 +1,54 @@
+{
+  "variants": {
+    "charged=false,facing=south": {
+      "model": "hexcreating:block/iota_pack_observer",
+      "x": 90
+    },
+    "charged=true,facing=south": {
+      "model": "hexcreating:block/iota_pack_observer_powered",
+      "x": 90
+    },
+    "charged=false,facing=north": {
+      "model": "hexcreating:block/iota_pack_observer",
+      "x": 270
+    },
+    "charged=true,facing=north": {
+      "model": "hexcreating:block/iota_pack_observer_powered",
+      "x": 270
+    },
+    "charged=false,facing=east": {
+      "model": "hexcreating:block/iota_pack_observer",
+      "x": 90,
+      "y": 270
+    },
+    "charged=true,facing=east": {
+      "model": "hexcreating:block/iota_pack_observer_powered",
+      "x": 90,
+      "y": 270
+    },
+    "charged=false,facing=west": {
+      "model": "hexcreating:block/iota_pack_observer",
+      "x": 90,
+      "y": 90
+    },
+    "charged=true,facing=west": {
+      "model": "hexcreating:block/iota_pack_observer_powered",
+      "x": 90,
+      "y": 90
+    },
+    "charged=false,facing=up": {
+      "model": "hexcreating:block/iota_pack_observer",
+      "x": 180
+    },
+    "charged=true,facing=up": {
+      "model": "hexcreating:block/iota_pack_observer_powered",
+      "x": 180
+    },
+    "charged=false,facing=down": {
+      "model": "hexcreating:block/iota_pack_observer"
+    },
+    "charged=true,facing=down": {
+      "model": "hexcreating:block/iota_pack_observer_powered"
+    }
+  }
+}

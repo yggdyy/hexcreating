@@ -23,5 +23,6 @@
   "hexcreating.iota_wire_reel.far": "两个连接器太远了!",
   "hexcreating.iota_wire_reel.success": "成功",
   "hexcreating.iota_wire_reel.fail": "失败",
-  "hexcreating.iota_wire_reel.unfinished": "未完成选定!"
+  "hexcreating.iota_wire_reel.unfinished": "未完成选定!",
+  "block.hexcreating.iota_pack_observer": "Iota包侦测器"
 }

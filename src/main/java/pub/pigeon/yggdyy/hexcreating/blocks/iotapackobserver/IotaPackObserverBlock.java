@@ -5,6 +5,7 @@ import com.simibubi.create.foundation.block.WrenchableDirectionalBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.util.math.BlockPos;
@@ -48,5 +49,10 @@ public class IotaPackObserverBlock extends WrenchableDirectionalBlock implements
     @Override
     public boolean emitsRedstonePower(BlockState blockState) {
         return true;
+    }
+
+    @Override
+    public BlockState getPlacementState(ItemPlacementContext context) {
+        return super.getPlacementState(context).with(CHARGED, false);
     }
 }
