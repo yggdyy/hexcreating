@@ -38,12 +38,12 @@ public class IotaPackObserverBlock extends WrenchableDirectionalBlock implements
 
     @Override
     public int getStrongRedstonePower(BlockState blockState, BlockView blockView, BlockPos blockPos, Direction direction) {
-        return getWeakRedstonePower(blockState, blockView, blockPos, direction);
+        return (boolean)blockState.get(CHARGED) && blockState.get(FACING) == direction ? 15 : 0;
     }
 
     @Override
     public int getWeakRedstonePower(BlockState blockState, BlockView blockView, BlockPos blockPos, Direction direction) {
-        return (boolean)blockState.get(CHARGED) && blockState.get(FACING) == direction ? 15 : 0;
+        return (boolean)blockState.get(CHARGED) && blockState.get(FACING).getOpposite() != direction ? 15 : 0;
     }
 
     @Override

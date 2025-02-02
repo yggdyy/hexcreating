@@ -24,5 +24,7 @@
   "hexcreating.iota_wire_reel.success": "成功",
   "hexcreating.iota_wire_reel.fail": "失败",
   "hexcreating.iota_wire_reel.unfinished": "未完成选定!",
-  "block.hexcreating.iota_pack_observer": "Iota包侦测器"
+  "block.hexcreating.iota_pack_observer": "Iota包侦测器",
+  "item.hexcreating.media_bucket": "液态媒质桶",
+  "block.hexcreating.media": "液态媒质"
 }
