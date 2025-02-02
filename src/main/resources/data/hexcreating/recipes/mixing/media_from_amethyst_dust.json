@@ -1,0 +1,18 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "tag": "c:amethyst_dusts"
+    },
+    {
+      "fluid": "minecraft:water",
+      "amount": 81
+    }
+  ],
+  "results": [
+    {
+      "amount": 81,
+      "fluid": "hexcreating:media"
+    }
+  ]
+}

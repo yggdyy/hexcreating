@@ -1,0 +1,19 @@
+{
+  "type": "create:mixing",
+  "heatRequirement": "heated",
+  "ingredients": [
+    {
+      "item": "hexcasting:charged_amethyst"
+    },
+    {
+      "fluid": "minecraft:water",
+      "amount": 810
+    }
+  ],
+  "results": [
+    {
+      "amount": 810,
+      "fluid": "hexcreating:media"
+    }
+  ]
+}

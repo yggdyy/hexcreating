@@ -1,0 +1,23 @@
+{
+  "type": "create:mixing",
+  "heatRequirement": "heated",
+  "ingredients": [
+    {
+      "item": "hexcasting:quenched_allay_shard"
+    },
+    {
+      "fluid": "hexcreating:media",
+      "amount": 81
+    },
+    {
+      "fluid": "minecraft:water",
+      "amount": 3159
+    }
+  ],
+  "results": [
+    {
+      "amount": 3240,
+      "fluid": "hexcreating:media"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "type": "create:mixing",
+  "heatRequirement": "heated",
+  "ingredients": [
+    {
+      "item": "minecraft:amethyst_cluster"
+    },
+    {
+      "fluid": "minecraft:water",
+      "amount": 4050
+    }
+  ],
+  "results": [
+    {
+      "amount": 4050,
+      "fluid": "hexcreating:media"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "type": "create:mixing",
+  "heatRequirement": "heated",
+  "ingredients": [
+    {
+      "tag": "c:amethyst"
+    },
+    {
+      "fluid": "minecraft:water",
+      "amount": 405
+    }
+  ],
+  "results": [
+    {
+      "amount": 405,
+      "fluid": "hexcreating:media"
+    }
+  ]
+}

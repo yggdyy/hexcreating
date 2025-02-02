@@ -1,0 +1,19 @@
+{
+  "type": "create:mixing",
+  "heatRequirement": "heated",
+  "ingredients": [
+    {
+      "item": "minecraft:small_amethyst_bud"
+    },
+    {
+      "fluid": "minecraft:water",
+      "amount": 810
+    }
+  ],
+  "results": [
+    {
+      "amount": 810,
+      "fluid": "hexcreating:media"
+    }
+  ]
+}
