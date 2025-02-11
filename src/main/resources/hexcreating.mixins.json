@@ -6,7 +6,8 @@
   "mixins": [
     "BlazeBurnerBlockEntityAccessor",
     "CircleExecutionStateInjector",
-    "FillingBySpoutMixin"
+    "FillingBySpoutMixin",
+    "GenericItemEmptyingMixin"
   ],
   "client": [],
   "server": [],

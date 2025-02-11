@@ -3,6 +3,9 @@
     "values": [
       "hexcreating:analytical_engine_controller", 
       "hexcreating:analytical_engine_alu", 
-      "hexcreating:analytical_engine_kinetic_interface"
+      "hexcreating:analytical_engine_kinetic_interface",
+      "hexcreating:iota_reader",
+      "hexcreating:iota_writer",
+      "hexcreating:iota_pack_observer"
     ]
 }
