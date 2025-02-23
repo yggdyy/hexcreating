@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 import pub.pigeon.yggdyy.hexcreating.blocks.ModBlockEntities;
 import pub.pigeon.yggdyy.hexcreating.client.render.IotaWireConnectorRenderer;
 import pub.pigeon.yggdyy.hexcreating.client.render.IotaWriterRenderer;
-import pub.pigeon.yggdyy.hexcreating.fluid.ModFluids;
+import pub.pigeon.yggdyy.hexcreating.fluids.ModFluids;
 
 public class HexcreatingClient implements ClientModInitializer {
     public static Logger LOGGER = LoggerFactory.getLogger("hexcreating_client");

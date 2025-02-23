@@ -5,7 +5,8 @@ import org.slf4j.LoggerFactory
 import pub.pigeon.yggdyy.hexcreating.blocks.ModBlockEntities
 import pub.pigeon.yggdyy.hexcreating.blocks.ModBlocks
 import pub.pigeon.yggdyy.hexcreating.cast.ModActions
-import pub.pigeon.yggdyy.hexcreating.fluid.ModFluids
+import pub.pigeon.yggdyy.hexcreating.create.display.ModDisplayBehaviours
+import pub.pigeon.yggdyy.hexcreating.fluids.ModFluids
 import pub.pigeon.yggdyy.hexcreating.items.ModItems
 
 object HexcreatingMain : ModInitializer {
@@ -21,5 +22,6 @@ object HexcreatingMain : ModInitializer {
 		ModBlockEntities.init()
 		ModItems.init();
 		ModFluids.init();
+		ModDisplayBehaviours.init();
 	}
 }

@@ -1,4 +1,4 @@
-package pub.pigeon.yggdyy.hexcreating.recipes.spout;
+package pub.pigeon.yggdyy.hexcreating.create.spout;
 
 import at.petrak.hexcasting.api.item.MediaHolderItem;
 import at.petrak.hexcasting.api.misc.MediaConstants;
@@ -6,7 +6,7 @@ import io.github.fabricators_of_create.porting_lib.fluids.FluidStack;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
-import pub.pigeon.yggdyy.hexcreating.fluid.MediaFluid;
+import pub.pigeon.yggdyy.hexcreating.fluids.MediaFluid;
 
 public class ChargingBySpout {
     public static boolean isItemMediaChargeable(World world, ItemStack stack) {

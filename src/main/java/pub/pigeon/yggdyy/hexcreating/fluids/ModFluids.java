@@ -1,4 +1,4 @@
-package pub.pigeon.yggdyy.hexcreating.fluid;
+package pub.pigeon.yggdyy.hexcreating.fluids;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -20,5 +20,11 @@ public class ModFluids {
     public static Item MEDIA_BUCKET = Registry.register(Registries.ITEM, new Identifier(HexcreatingMain.MOD_ID, "media_bucket"), new BucketItem(STILL_MEDIA, new FabricItemSettings().maxCount(1).recipeRemainder(Items.BUCKET)));
     public static Block MEDIA = Registry.register(Registries.BLOCK, new Identifier(HexcreatingMain.MOD_ID, "media"), new FluidBlock(STILL_MEDIA, FabricBlockSettings.copyOf(Blocks.WATER)));
 
-    public static void init() {}
+    public static void init() {
+        registerFluidStorage();
+    }
+
+    private static void registerFluidStorage() {
+
+    }
 }

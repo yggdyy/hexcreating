@@ -1,11 +1,11 @@
-package pub.pigeon.yggdyy.hexcreating.recipes.drain;
+package pub.pigeon.yggdyy.hexcreating.create.drain;
 
 import at.petrak.hexcasting.api.item.MediaHolderItem;
 import at.petrak.hexcasting.api.misc.MediaConstants;
 import com.simibubi.create.foundation.utility.Pair;
 import io.github.fabricators_of_create.porting_lib.fluids.FluidStack;
 import net.minecraft.item.ItemStack;
-import pub.pigeon.yggdyy.hexcreating.fluid.ModFluids;
+import pub.pigeon.yggdyy.hexcreating.fluids.ModFluids;
 
 public class MediaHolderItemEmpty {
     public static boolean canItemBeEmptied(ItemStack stack) {

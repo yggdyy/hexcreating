@@ -1,4 +1,4 @@
-package pub.pigeon.yggdyy.hexcreating.fluid;
+package pub.pigeon.yggdyy.hexcreating.fluids;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.fluid.Fluid;
