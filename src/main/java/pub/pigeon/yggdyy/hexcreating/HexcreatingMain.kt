@@ -1,10 +1,12 @@
 package pub.pigeon.yggdyy.hexcreating
 
+import com.simibubi.create.content.kinetics.BlockStressValues
 import net.fabricmc.api.ModInitializer
 import org.slf4j.LoggerFactory
 import pub.pigeon.yggdyy.hexcreating.blocks.ModBlockEntities
 import pub.pigeon.yggdyy.hexcreating.blocks.ModBlocks
 import pub.pigeon.yggdyy.hexcreating.cast.ModActions
+import pub.pigeon.yggdyy.hexcreating.create.ModStressValueProvider
 import pub.pigeon.yggdyy.hexcreating.create.display.ModDisplayBehaviours
 import pub.pigeon.yggdyy.hexcreating.fluids.ModFluids
 import pub.pigeon.yggdyy.hexcreating.items.ModItems
@@ -23,5 +25,6 @@ object HexcreatingMain : ModInitializer {
 		ModItems.init();
 		ModFluids.init();
 		ModDisplayBehaviours.init();
+		BlockStressValues.registerProvider(MOD_ID, ModStressValueProvider())
 	}
 }

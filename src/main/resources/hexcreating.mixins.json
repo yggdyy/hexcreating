@@ -5,9 +5,9 @@
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "BlazeBurnerBlockEntityAccessor",
-    "CircleExecutionStateInjector",
     "FillingBySpoutMixin",
-    "GenericItemEmptyingMixin"
+    "GenericItemEmptyingMixin",
+    "CircleCastInvAccessor"
   ],
   "client": [],
   "server": [],

@@ -26,8 +26,8 @@ object ModActions {
         register(OpKineticNetworkStressUsedPurification.NAME, OpKineticNetworkStressUsedPurification.STROKE, OpKineticNetworkStressUsedPurification.DIR, OpKineticNetworkStressUsedPurification())
         register(OpKineticStressPurification.NAME, OpKineticStressPurification.STROKE, OpKineticStressPurification.DIR, OpKineticStressPurification())
 
-        register(OpCircleAmplifierGambit.NAME, OpCircleAmplifierGambit.STROKE, OpCircleAmplifierGambit.DIR, OpCircleAmplifierGambit())
-        register(OpCircleAmplifierPurification.NAME, OpCircleAmplifierPurification.STROKE, OpCircleAmplifierPurification.DIR, OpCircleAmplifierPurification())
+        //register(OpCircleAmplifierGambit.NAME, OpCircleAmplifierGambit.STROKE, OpCircleAmplifierGambit.DIR, OpCircleAmplifierGambit())
+        //register(OpCircleAmplifierPurification.NAME, OpCircleAmplifierPurification.STROKE, OpCircleAmplifierPurification.DIR, OpCircleAmplifierPurification())
     }
 
     private fun register(name: String, stroke: String, dir: HexDir, action: Action) {

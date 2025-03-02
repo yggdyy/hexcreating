@@ -14,6 +14,7 @@ import net.minecraft.item.ItemUsageContext;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.EnumProperty;
+import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.StringIdentifiable;
 import net.minecraft.util.math.BlockPos;
@@ -66,6 +67,7 @@ public class CircleInputerBlock extends BlockCircleComponent implements IBE<Circ
     @Override
     public ControlFlow acceptControlFlow(CastingImage imageIn, CircleCastEnv env, Direction enterDir, BlockPos pos, BlockState bs, ServerWorld world) {
         if(world.getBlockEntity(pos) != null && world.getBlockEntity(pos) instanceof CircleInputerBlockEntity be) {
+            //world.getPlayers().get(0).sendMessage(Text.literal(imageIn.getStack().size() + ""));
             var exitDirsSet = this.possibleExitDirections(pos, bs, world);
             exitDirsSet.remove(enterDir.getOpposite());
             var exitDirs = exitDirsSet.stream().map((dir) -> this.exitPositionFromDirection(pos, dir));
@@ -74,7 +76,7 @@ public class CircleInputerBlock extends BlockCircleComponent implements IBE<Circ
             resIotas.addAll(be.iotas);
             CastingImage resImg = imageIn.copy(resIotas, imageIn.getParenCount(), imageIn.getParenthesized(), imageIn.getEscapeNext(), imageIn.getOpsConsumed(), imageIn.getUserData());
             //HexcreatingMain.LOGGER.debug(imageIn.getStack().size() + "");
-            //world.getPlayers().get(0).sendMessage(Text.literal(resImg.getStack().size() + ""));
+           // world.getPlayers().get(0).sendMessage(resImg.getStack().get(0).display());
             return new ControlFlow.Continue(resImg, exitDirs.toList());
         }
         return new ControlFlow.Stop();
