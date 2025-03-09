@@ -6,6 +6,7 @@
       "hexcreating:analytical_engine_kinetic_interface",
       "hexcreating:iota_reader",
       "hexcreating:iota_writer",
-      "hexcreating:iota_pack_observer"
+      "hexcreating:iota_pack_observer",
+      "hexcreating:circle_amplifier"
     ]
 }

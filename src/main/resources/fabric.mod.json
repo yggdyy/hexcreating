@@ -1,9 +1,9 @@
 {
 	"schemaVersion": 1,
 	"id": "hexcreating",
-	"version": "${version}",
+	"version": "0.0.2",
 	"name": "HexCreating",
-	"description": "aaaaaaaaaaaaa~",
+	"description": "Compacts between HexCasting and Create",
 	"authors": [
 		"yggdyy_"
 	],

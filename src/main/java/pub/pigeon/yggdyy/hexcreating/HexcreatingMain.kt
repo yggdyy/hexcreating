@@ -10,6 +10,7 @@ import pub.pigeon.yggdyy.hexcreating.create.ModStressValueProvider
 import pub.pigeon.yggdyy.hexcreating.create.display.ModDisplayBehaviours
 import pub.pigeon.yggdyy.hexcreating.fluids.ModFluids
 import pub.pigeon.yggdyy.hexcreating.items.ModItems
+import pub.pigeon.yggdyy.hexcreating.listeners.ModEventListeners
 
 object HexcreatingMain : ModInitializer {
 	const val MOD_ID = "hexcreating"
@@ -18,6 +19,7 @@ object HexcreatingMain : ModInitializer {
 	//val CREATE_REGISTRY = CreateRegistrate.create(MOD_ID)
 
 	override fun onInitialize() {
+		ModEventListeners.init();
 		ModActions.registerModActions()
 		ModBlocks.init()
 		//ModBlockCreate.init()

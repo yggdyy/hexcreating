@@ -33,5 +33,21 @@
   "hexcreating.display_source.akashic_bookshelf_pattern_display_source": "阿卡夏书架之键",
   "hexcreating.display_source.akashic_bookshelf_iota_display_source": "阿卡夏书架之值",
   "hexcreating.display_source.slate_pattern_display_source": "石板上的图案",
-  "block.hexcreating.circle_amplifier": "法术环增幅器"
+  "block.hexcreating.circle_amplifier": "法术环增幅器",
+  "block.hexcreating.soul": "液态灵魂",
+  "item.hexcreating.raw_soul": "原始灵魂",
+  "hexcreating.page.liquid_media.title": "液态媒质",
+  "hexcreating.page.liquid_media.0": "据我所知，媒质的形态千变万化，就比较常见的来说，有最普通的固态(也有人称其为晶态)，在试剂瓶里的半液态，以及，我接下来要说的，完全的液态。$(br)不过这液态媒质似乎没什么大用，既不能直接给我的施法提供媒质，也不像试剂瓶或者固态的紫水晶那样方便携带。",
+  "hexcreating.page.liquid_media.1": "把紫水晶粉和水在工作盆里面混合，再用动力搅拌器狠狠的搅拌，就会产生一种紫色的液体，那就是液态媒质。实际上使用紫水晶碎片、充能紫水晶等其他的紫水晶也可以进行这个制作过程，不过似乎需要借助一些来自下界的热情生物的力量。",
+  "hexcreating.page.liquid_media.2": "当然，我不止可以将固态媒质转化为液态媒质，试剂瓶里面的半液态媒质可以通过分液池转化为对应量的液态媒质，液态媒质也可以通过注液器装填试剂瓶。哦对了，1mB的液态媒质相当于1个紫水晶粉。$(br)但很遗憾，我还没发现什么很好的将液态媒质转回固态的方法。",
+  "hexcreating.page.liquid_media.3": "我目前发现的关于液态媒质的用处就这些，但研究仍将继续。或许我应该试试把大量的液态媒质堆在一起，用我从工程师们那里学来的软管滑轮，不过从哪弄来那么多媒质，以及怎么制作那么巨大的容器都还是个问题。另外我总觉得这些液态的媒质和那个长得像骷髅头的法术图案有着一些联系...",
+  "hexcreating.page.liquid_soul.title": "液态灵魂",
+  "hexcreating.page.liquid_soul.0": "意识，灵魂，思维，媒质等等这些词语，它们的内涵如此接近，但我不知道他们究竟有什么区别和联系。$(br)在掌握了剥离意识这个恐怖的法术后，我好像想到了液态媒质的一种疯狂的用法。",
+  "hexcreating.page.liquid_soul.1": "一般来说，生物死亡的时候，灵魂就将随之消逝。但是，偶然间我发现，灵魂沙(土)上面永恒燃烧的灵魂之火似乎会部分留住这些散失的灵魂。$(br)简单来说，当生物在灵魂火中死亡时，会掉落对应的原始灵魂，一般是一份，有些时候是两份。这或许和灵魂火中飞舞的灵魂沙颗粒有关。",
+  "hexcreating.page.liquid_soul.2": "把获得的原始灵魂和液态媒质在加热的情况下搅拌，就可以得到对应的液态灵魂。具体来说，消耗25mB的液态媒质和1个原始灵魂，得到25mB的液态灵魂。$(br)同种生物的液态灵魂可以混合，也就是说在前面的操作中，生物的个体差异被抹消掉了。$(br)液态灵魂不能装到桶或者瓶子里面，这也侧面说明了离开了肉体的灵魂有多么脆弱，即便是浸泡在液态媒质中。",
+  "hexcreating.page.liquid_soul.3": "神奇的事情发生了，通过注液器，我可以用液态灵魂进行剥离意识操作。真是见了鬼了，为什么生物个体的差异被抹消了还能进行剥离意识？$(br)将100mB的村民的液态灵魂，注入置物台或者传送带上的空白促动石，会得到随机的一种有功能的促动石。同理，10mB的悦灵的液态灵魂注入紫水晶块，可以得到淬灵晶块。可以认为，消耗液体量(mB)=平均直接法术操作消耗媒质量(粉)。",
+  "hexcreating.page.liquid_soul.4": "追加：$(br)为什么？为什么矿车、船等这些毫无智能的东西也有对应的原始灵魂？我对此有一个疯狂的想法，关于我们的世界，但我不能继续了，我会疯掉的。",
+  "hexcreating.page.circle_amplifier.title": "法术环增幅器",
+  "hexcreating.page.circle_amplifier.0": "我早就看这个破法术环不爽了，为什么就不能影响环外面的东西呢？不过我发现了，媒质波的频率很低，旋转就足以将其发射出去。于是就有了这个法术环增幅器，把它接在法术环上，媒质波在通过后就可以一定程度上影响环外面的世界了。",
+  "hexcreating.page.circle_amplifier.1": "从底部接入动力，每4RPM转速对应一格增幅距离。不过这个距离究竟是怎么折算成范围的或许还需要实验一下。$(br)注意，用了这个之后各种折角之精思返回的向量都或许会变化。"
 }

@@ -41,5 +41,12 @@ public class HexcreatingClient implements ClientModInitializer {
                 0xb38ef3
         ));
         BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), ModFluids.STILL_MEDIA, ModFluids.FLOWING_MEDIA);
+
+        FluidRenderHandlerRegistry.INSTANCE.register(ModFluids.STILL_SOUL, ModFluids.FLOWING_SOUL, new SimpleFluidRenderHandler(
+                new Identifier("minecraft:block/soul_soil"),
+                new Identifier("minecraft:block/soul_soil"),
+                0x03a6f7
+        ));
+        BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), ModFluids.STILL_SOUL, ModFluids.FLOWING_SOUL);
     }
 }

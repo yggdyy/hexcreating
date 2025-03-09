@@ -19,6 +19,8 @@ public class ModFluids {
     public static FlowableFluid FLOWING_MEDIA = Registry.register(Registries.FLUID, new Identifier(HexcreatingMain.MOD_ID, "flowing_media"), new MediaFluid.Flowing());
     public static Item MEDIA_BUCKET = Registry.register(Registries.ITEM, new Identifier(HexcreatingMain.MOD_ID, "media_bucket"), new BucketItem(STILL_MEDIA, new FabricItemSettings().maxCount(1).recipeRemainder(Items.BUCKET)));
     public static Block MEDIA = Registry.register(Registries.BLOCK, new Identifier(HexcreatingMain.MOD_ID, "media"), new FluidBlock(STILL_MEDIA, FabricBlockSettings.copyOf(Blocks.WATER)));
+    public static FlowableFluid STILL_SOUL = Registry.register(Registries.FLUID, new Identifier(HexcreatingMain.MOD_ID, "soul"), new SoulFluid.Still());
+    public static FlowableFluid FLOWING_SOUL = Registry.register(Registries.FLUID, new Identifier(HexcreatingMain.MOD_ID, "flowing_soul"), new SoulFluid.Flowing());
 
     public static void init() {
         registerFluidStorage();

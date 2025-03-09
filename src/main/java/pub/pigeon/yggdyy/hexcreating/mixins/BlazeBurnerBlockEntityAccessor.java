@@ -11,12 +11,8 @@ public interface BlazeBurnerBlockEntityAccessor {
     int hexcreating_getRemainingBurnTime();
     @Accessor("remainingBurnTime")
     void hexcreating_setRemainingBurnTime(int remainingBurnTime);
-
-    @Accessor("activeFuel")
-    BlazeBurnerBlockEntity.FuelType hexcreating_getActiveFuel();
     @Accessor("activeFuel")
     void hexcreating_setActiveFuel(BlazeBurnerBlockEntity.FuelType fuelType);
-
     @Invoker("playSound")
     void hexcreating_playSound();
 

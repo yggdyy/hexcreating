@@ -12,6 +12,7 @@ public class ModItems {
     public static Item IOTA_WIRE_CONNECTOR_TECH = register("iota_wire_connector_tech", new Item(new Item.Settings()));
     public static Item IOTA_WIRE_CONNECTOR = register("iota_wire_connector", new IotaWireConnectorItem(new Item.Settings()));
     public static Item IOTA_WIRE = register("iota_wire", new Item(new Item.Settings()));
+    public static RawSoulItem RAW_SOUL = register("raw_soul", new RawSoulItem(new Item.Settings().fireproof()));
 
     public static void init() {}
     public static <T extends Item> T register(String name, T item) {

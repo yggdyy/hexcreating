@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "E",
+    "B",
+    "S"
+  ],
+  "key": {
+    "E": {
+      "item": "hexcasting:charged_amethyst"
+    },
+    "B": {
+      "item": "create:brass_casing"
+    },
+    "S": {
+      "item": "create:shaft"
+    }
+  },
+  "result": {
+    "item": "hexcreating:circle_amplifier"
+  }
+}
