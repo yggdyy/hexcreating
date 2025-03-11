@@ -19,6 +19,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class FlayMindBySpout {
+    @Nullable
     public static List<BrainsweepRecipe> RECIPES = null;
     private static final Random RANDOM = Random.create();
 
