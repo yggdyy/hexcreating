@@ -1,0 +1,67 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "create:railway_casing"
+  },
+  "loops": 1,
+  "results": [
+    {
+      "item": "hexcreating:train_gate_frame"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "hexcreating:unfinished_train_gate_frame"
+        },
+        {
+          "item": "hexcasting:quenched_allay_shard"
+        }
+      ],
+      "results": [
+        {
+          "item": "hexcreating:unfinished_train_gate_frame"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "hexcreating:unfinished_train_gate_frame"
+        },
+        {
+          "item": "hexcasting:slate"
+        }
+      ],
+      "results": [
+        {
+          "item": "hexcreating:unfinished_train_gate_frame"
+        }
+      ]
+    },
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "hexcreating:unfinished_train_gate_frame"
+        },
+        {
+          "amount": 1620,
+          "fluid": "hexcreating:media",
+          "nbt": {}
+        }
+      ],
+      "results": [
+        {
+          "item": "hexcreating:unfinished_train_gate_frame"
+        }
+      ]
+    }
+  ],
+  "transitionalItem": {
+    "item": "hexcreating:unfinished_train_gate_frame"
+  }
+}

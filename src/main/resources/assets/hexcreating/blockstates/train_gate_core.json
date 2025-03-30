@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "hexcreating:block/train_gate_core"
+    }
+  }
+}

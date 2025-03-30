@@ -7,6 +7,8 @@
       "hexcreating:iota_reader",
       "hexcreating:iota_writer",
       "hexcreating:iota_pack_observer",
-      "hexcreating:circle_amplifier"
+      "hexcreating:circle_amplifier",
+      "hexcreating:train_gate_frame",
+      "hexcreating:train_gate_core"
     ]
 }

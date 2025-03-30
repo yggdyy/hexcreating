@@ -18,6 +18,9 @@ import pub.pigeon.yggdyy.hexcreating.blocks.connector.IotaWireConnectorBlock
 import pub.pigeon.yggdyy.hexcreating.blocks.iotapackobserver.IotaPackObserverBlock
 import pub.pigeon.yggdyy.hexcreating.blocks.iotareader.IotaReaderBlock
 import pub.pigeon.yggdyy.hexcreating.blocks.iotawriter.IotaWriteBlock
+import pub.pigeon.yggdyy.hexcreating.blocks.train_gate.TrainGateBlock
+import pub.pigeon.yggdyy.hexcreating.blocks.train_gate.TrainGateCoreBlock
+import pub.pigeon.yggdyy.hexcreating.blocks.train_gate.TrainGateFrameBlock
 
 object ModBlocks {
     val ANALYTICAL_ENGINE_CONTROLLER: Block = register("analytical_engine_controller", AnalyticalEngineControllerBlock(AbstractBlock.Settings.copy(AllBlocks.BRASS_BLOCK.get())))
@@ -32,6 +35,9 @@ object ModBlocks {
     val CIRCLE_INPUTER: Block = register("circle_inputer", CircleInputerBlock(AbstractBlock.Settings.copy(AllBlocks.BRASS_BLOCK.get())))
     val CIRCLE_OUTPUTER: Block = register("circle_outputer", CircleOutputerBlock(AbstractBlock.Settings.copy(AllBlocks.BRASS_BLOCK.get())))
     val CIRCLE_AMPLIFIER: Block = register("circle_amplifier", CircleAmplifierBlock(AbstractBlock.Settings.copy(Blocks.COPPER_BLOCK)))
+    val TRAIN_GATE: Block = register("train_gate", TrainGateBlock(AbstractBlock.Settings.copy(Blocks.NETHER_PORTAL)), false)
+    val TRAIN_GATE_FRAME: Block = register("train_gate_frame", TrainGateFrameBlock(AbstractBlock.Settings.copy(AllBlocks.RAILWAY_CASING.get())))
+    val TRAIN_GATE_CORE: Block = register("train_gate_core", TrainGateCoreBlock(AbstractBlock.Settings.copy(TRAIN_GATE_FRAME)))
 
     private fun register(name: String, block: Block, withItem: Boolean = true): Block {
         val id: Identifier = Identifier(HexcreatingMain.MOD_ID, name)

@@ -8,6 +8,7 @@ import pub.pigeon.yggdyy.hexcreating.blocks.ModBlocks
 import pub.pigeon.yggdyy.hexcreating.cast.ModActions
 import pub.pigeon.yggdyy.hexcreating.create.ModStressValueProvider
 import pub.pigeon.yggdyy.hexcreating.create.display.ModDisplayBehaviours
+import pub.pigeon.yggdyy.hexcreating.create.train.ModPortalTracks
 import pub.pigeon.yggdyy.hexcreating.fluids.ModFluids
 import pub.pigeon.yggdyy.hexcreating.items.ModItems
 import pub.pigeon.yggdyy.hexcreating.listeners.ModEventListeners
@@ -28,5 +29,6 @@ object HexcreatingMain : ModInitializer {
 		ModFluids.init();
 		ModDisplayBehaviours.init();
 		BlockStressValues.registerProvider(MOD_ID, ModStressValueProvider())
+		ModPortalTracks.init();
 	}
 }

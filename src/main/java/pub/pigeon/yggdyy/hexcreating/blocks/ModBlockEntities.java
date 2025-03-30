@@ -15,6 +15,7 @@ import pub.pigeon.yggdyy.hexcreating.blocks.connector.IotaWireConnectorBlockEnti
 import pub.pigeon.yggdyy.hexcreating.blocks.iotapackobserver.IotaPackObserverBlockEntity;
 import pub.pigeon.yggdyy.hexcreating.blocks.iotareader.IotaReaderBlockEntity;
 import pub.pigeon.yggdyy.hexcreating.blocks.iotawriter.IotaWriteBlockEntity;
+import pub.pigeon.yggdyy.hexcreating.blocks.train_gate.TrainGateCoreBlockEntity;
 
 
 public class ModBlockEntities {
@@ -61,6 +62,10 @@ public class ModBlockEntities {
     public static final BlockEntityType<CircleAmplifierBlockEntity> CIRCLE_AMPLIFIER = register(
             "circle_amplifier",
             BlockEntityType.Builder.create(CircleAmplifierBlockEntity::new, ModBlocks.INSTANCE.getCIRCLE_AMPLIFIER()).build(null)
+    );
+    public static final BlockEntityType<TrainGateCoreBlockEntity> TRAIN_GATE_CORE = register(
+            "train_gate_core",
+            BlockEntityType.Builder.create(TrainGateCoreBlockEntity::new, ModBlocks.INSTANCE.getTRAIN_GATE_CORE()).build(null)
     );
 
     public static <T extends BlockEntityType<?>> T register(String path, T blockEntityType) {

@@ -12,8 +12,6 @@ import pub.pigeon.yggdyy.hexcreating.cast.actions.*
 
 object ModActions {
     public fun registerModActions() {
-        register(OpTest.NAME, OpTest.STROKE, OpTest.DIR, OpTest())
-
         register(OpKelvinHeatGambit.NAME, OpKelvinHeatGambit.STROKE, OpKelvinHeatGambit.DIR, OpKelvinHeatGambit())
         register(OpKelvinSuperHeatGambit.NAME, OpKelvinSuperHeatGambit.STROKE, OpKelvinSuperHeatGambit.DIR, OpKelvinSuperHeatGambit())
         register(OpKelvinTimePurification.NAME, OpKelvinTimePurification.STROKE, OpKelvinTimePurification.DIR, OpKelvinTimePurification())
@@ -26,6 +24,7 @@ object ModActions {
         register(OpKineticNetworkStressUsedPurification.NAME, OpKineticNetworkStressUsedPurification.STROKE, OpKineticNetworkStressUsedPurification.DIR, OpKineticNetworkStressUsedPurification())
         register(OpKineticStressPurification.NAME, OpKineticStressPurification.STROKE, OpKineticStressPurification.DIR, OpKineticStressPurification())
 
+        register(OpTrainGateSetUpGambit.NAME, OpTrainGateSetUpGambit.STROKE, OpTrainGateSetUpGambit.DIR, OpTrainGateSetUpGambit())
         //register(OpCircleAmplifierGambit.NAME, OpCircleAmplifierGambit.STROKE, OpCircleAmplifierGambit.DIR, OpCircleAmplifierGambit())
         //register(OpCircleAmplifierPurification.NAME, OpCircleAmplifierPurification.STROKE, OpCircleAmplifierPurification.DIR, OpCircleAmplifierPurification())
     }

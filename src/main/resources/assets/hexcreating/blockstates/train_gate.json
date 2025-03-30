@@ -1,0 +1,11 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "hexcreating:block/train_gate"
+    },
+    "axis=z": {
+      "model": "hexcreating:block/train_gate",
+      "y": 90
+    }
+  }
+}

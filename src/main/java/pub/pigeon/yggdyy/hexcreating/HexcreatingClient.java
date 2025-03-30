@@ -11,6 +11,7 @@ import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pub.pigeon.yggdyy.hexcreating.blocks.ModBlockEntities;
+import pub.pigeon.yggdyy.hexcreating.blocks.ModBlocks;
 import pub.pigeon.yggdyy.hexcreating.client.render.CircleAmplifierRenderer;
 import pub.pigeon.yggdyy.hexcreating.client.render.IotaWireConnectorRenderer;
 import pub.pigeon.yggdyy.hexcreating.client.render.IotaWriterRenderer;
@@ -48,5 +49,8 @@ public class HexcreatingClient implements ClientModInitializer {
                 0x03a6f7
         ));
         BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), ModFluids.STILL_SOUL, ModFluids.FLOWING_SOUL);
+
+        //Train Gate
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.INSTANCE.getTRAIN_GATE(), RenderLayer.getTranslucent());
     }
 }

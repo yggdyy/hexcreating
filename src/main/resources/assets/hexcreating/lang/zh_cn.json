@@ -49,5 +49,16 @@
   "hexcreating.page.liquid_soul.4": "追加：$(br)为什么？为什么矿车、船等这些毫无智能的东西也有对应的原始灵魂？我对此有一个疯狂的想法，关于我们的世界，但我不能继续了，我会疯掉的。",
   "hexcreating.page.circle_amplifier.title": "法术环增幅器",
   "hexcreating.page.circle_amplifier.0": "我早就看这个破法术环不爽了，为什么就不能影响环外面的东西呢？不过我发现了，媒质波的频率很低，旋转就足以将其发射出去。于是就有了这个法术环增幅器，把它接在法术环上，媒质波在通过后就可以一定程度上影响环外面的世界了。",
-  "hexcreating.page.circle_amplifier.1": "从底部接入动力，每4RPM转速对应一格增幅距离。不过这个距离究竟是怎么折算成范围的或许还需要实验一下。$(br)注意，用了这个之后各种折角之精思返回的向量都或许会变化。"
+  "hexcreating.page.circle_amplifier.1": "从底部接入动力，每4RPM转速对应一格增幅距离。不过这个距离究竟是怎么折算成范围的或许还需要实验一下。$(br)注意，用了这个之后各种折角之精思返回的向量都或许会变化。",
+  "hexcreating.page.operations.title": "咒法动力与机械学",
+  "hexcreating.page.operations.0": "齿轮旋转，蒸汽鸣响，火车飞驰。我一向对这些非魔法的事物非常感兴趣，至少它们比咒法安全多了(想想那些研究咒法到发疯的人)。自然提供给了我们一些关于这些机械的图案，有用无用，我都记录在这里。",
+  "hexcreating.page.operations.kelvin_heat_gambit": "严格来说这是个法术，但方便起见也写在这里。本法术可以让烈焰人燃烧室进入普通燃烧状态，接受一个表示烈焰人燃烧室的位置向量，一个表示燃烧时间的数字(单位：tick)，消耗该数字除以20个紫水晶粉的媒质量。",
+
+  "block.hexcreating.train_gate": "浮辇之门",
+  "block.hexcreating.train_gate_frame": "浮辇之门框架",
+  "block.hexcreating.train_gate_core": "浮辇之门核心",
+  "hexcasting.action.hexcreating:train_gate_set_up_gambit": "创建浮辇之门",
+  "mishaps.need_train_gate_core": "浮辇之门核心",
+  "item.hexcreating.unfinished_train_gate_frame": "浮辇之门框架（半成品）"
+
 }
