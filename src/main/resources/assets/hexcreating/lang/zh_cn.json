@@ -59,6 +59,12 @@
   "block.hexcreating.train_gate_core": "浮辇之门核心",
   "hexcasting.action.hexcreating:train_gate_set_up_gambit": "创建浮辇之门",
   "mishaps.need_train_gate_core": "浮辇之门核心",
-  "item.hexcreating.unfinished_train_gate_frame": "浮辇之门框架（半成品）"
+  "item.hexcreating.unfinished_train_gate_frame": "浮辇之门框架（半成品）",
 
+  "item.hexcreating.thought_key.hexcasting_introduction": "思维之匙-初识咒法学",
+  "hexcreating.ponder.hexcasting_introduction.header": "初识咒法学",
+  "hexcreating.ponder.hexcasting_introduction.text_1": "咒法学是一个强大的魔法mod，在这里你可以消耗紫水晶（媒质）",
+  "hexcreating.ponder.hexcasting_introduction.text_2": "通过你的法杖",
+  "hexcreating.ponder.hexcasting_introduction.text_3": "在一个六边形点阵上绘制各种图案",
+  "hexcreating.ponder.hexcasting_introduction.text_4": "以此来获取施法所需的诸多信息（Iota），并将它们存放在你的“信息存储空间”（栈）中，在对他们进行处理后施放出强大的法术。"
 }

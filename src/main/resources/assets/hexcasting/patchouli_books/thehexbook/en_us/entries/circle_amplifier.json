@@ -1,0 +1,20 @@
+{
+  "name": "hexcreating.page.circle_amplifier.title",
+  "icon": "hexcreating:circle_amplifier",
+  "category": "hexcasting:items",
+  "advancement": "hexcasting:enlightenment",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "hexcreating:circle_amplifier"
+      },
+      "text": "hexcreating.page.circle_amplifier.0"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "hexcreating:crafting_shaped/circle_amplifier",
+      "text": "hexcreating.page.circle_amplifier.1"
+    }
+  ]
+}

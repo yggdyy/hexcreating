@@ -1,0 +1,20 @@
+{
+  "name": "hexcreating.page.operations.title",
+  "icon": "create:blaze_burner",
+  "category": "hexcasting:patterns",
+  "advancement": "hexcasting:root",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "hexcreating.page.operations.0"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcreating:kelvin_heat_gambit",
+      "anchor": "hexcreating:kelvin_heat_gambit",
+      "input": "vector,num",
+      "output": "",
+      "text": "hexcreating.page.operations.kelvin_heat_gambit"
+    }
+  ]
+}
