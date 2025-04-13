@@ -1,0 +1,40 @@
+{
+  "name": "hexcreating.page.ponder.title",
+  "icon": "hexcreating:thought_key/hexcasting_introduction",
+  "category": "hexcasting:basics",
+  "advancement": "hexcasting:root",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "hexcreating.page.ponder.introduction"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "hexcreating:thought_key/hexcasting_introduction"
+      },
+      "text": "hexcreating.page.ponder.hexcasting_introduction"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "hexcreating:thought_key/basic_iota"
+      },
+      "text": "hexcreating.page.ponder.basic_iota"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "hexcreating:thought_key/vector"
+      },
+      "text": "hexcreating.page.ponder.vector"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "hexcreating:thought_key/stack"
+      },
+      "text": "hexcreating.page.ponder.stack"
+    }
+  ]
+}

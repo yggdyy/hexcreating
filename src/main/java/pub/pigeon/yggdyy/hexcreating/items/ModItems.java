@@ -28,5 +28,7 @@ public class ModItems {
     //following are items registered through create
     public static final CreateRegistrate CREATE_REGISTRATE = CreateRegistrate.create(HexcreatingMain.MOD_ID);
     public static final ItemEntry<Item> THOUGHT_KEY_HEXCASTING_INTRODUCTION = CREATE_REGISTRATE.item("thought_key/hexcasting_introduction", Item::new).register();
-
+    public static final ItemEntry<Item> THOUGHT_KEY_BASIC_IOTA = CREATE_REGISTRATE.item("thought_key/basic_iota", Item::new).register();
+    public static final ItemEntry<Item> THOUGHT_KEY_STACK = CREATE_REGISTRATE.item("thought_key/stack", Item::new).register();
+    public static final ItemEntry<Item> THOUGHT_KEY_VECTOR = CREATE_REGISTRATE.item("thought_key/vector", Item::new).register();
 }
