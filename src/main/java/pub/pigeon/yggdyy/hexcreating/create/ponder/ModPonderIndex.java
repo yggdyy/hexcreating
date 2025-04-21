@@ -16,5 +16,7 @@ public class ModPonderIndex {
                 .addStoryBoard("hex/empty_5_5", HexIntroductionScenes::baseIotaBool);
         HELPER.forComponents(ModItems.THOUGHT_KEY_VECTOR)
                 .addStoryBoard("hex/empty_5_5", HexIntroductionScenes::vector);
+        HELPER.forComponents(ModItems.THOUGHT_KEY_STACK)
+                .addStoryBoard("hex/empty_5_5_10", HexIntroductionScenes::stack);
     }
 }

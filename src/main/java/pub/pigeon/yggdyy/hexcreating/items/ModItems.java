@@ -31,4 +31,9 @@ public class ModItems {
     public static final ItemEntry<Item> THOUGHT_KEY_BASIC_IOTA = CREATE_REGISTRATE.item("thought_key/basic_iota", Item::new).register();
     public static final ItemEntry<Item> THOUGHT_KEY_STACK = CREATE_REGISTRATE.item("thought_key/stack", Item::new).register();
     public static final ItemEntry<Item> THOUGHT_KEY_VECTOR = CREATE_REGISTRATE.item("thought_key/vector", Item::new).register();
+    public static final ItemEntry<Item> THOUGHT_KEY_PATTERN_INTRODUCTION = CREATE_REGISTRATE.item("thought_key/pattern_introduction", Item::new).register();
+    public static final ItemEntry<Item> THOUGHT_KEY_PATTERN_LOCATE = CREATE_REGISTRATE.item("thought_key/pattern_locate", Item::new).register();
+    public static final ItemEntry<Item> THOUGHT_KEY_PATTERN_CONSTANTS = CREATE_REGISTRATE.item("thought_key/pattern_constants", Item::new).register();
+    public static final ItemEntry<Item> THOUGHT_KEY_PATTERN_CALCULATE = CREATE_REGISTRATE.item("thought_key/pattern_calculate", Item::new).register();
+    public static final ItemEntry<Item> THOUGHT_KEY_PATTERN_SPELL_1 = CREATE_REGISTRATE.item("thought_key/pattern_spell_1", Item::new).register();
 }

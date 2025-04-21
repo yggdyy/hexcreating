@@ -35,6 +35,10 @@
         "item": "hexcreating:thought_key/stack"
       },
       "text": "hexcreating.page.ponder.stack"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "hexcreating.page.ponder.media"
     }
   ]
 }

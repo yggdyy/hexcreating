@@ -6,6 +6,7 @@ import org.slf4j.LoggerFactory
 import pub.pigeon.yggdyy.hexcreating.blocks.ModBlockEntities
 import pub.pigeon.yggdyy.hexcreating.blocks.ModBlocks
 import pub.pigeon.yggdyy.hexcreating.cast.ModActions
+import pub.pigeon.yggdyy.hexcreating.cast.ModIotaTypes
 import pub.pigeon.yggdyy.hexcreating.create.ModStressValueProvider
 import pub.pigeon.yggdyy.hexcreating.create.display.ModDisplayBehaviours
 import pub.pigeon.yggdyy.hexcreating.create.train.ModPortalTracks
@@ -30,5 +31,6 @@ object HexcreatingMain : ModInitializer {
 		ModDisplayBehaviours.init();
 		BlockStressValues.registerProvider(MOD_ID, ModStressValueProvider())
 		ModPortalTracks.init();
+		ModIotaTypes.init();
 	}
 }

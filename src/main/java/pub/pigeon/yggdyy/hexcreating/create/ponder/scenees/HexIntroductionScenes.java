@@ -1,8 +1,8 @@
 package pub.pigeon.yggdyy.hexcreating.create.ponder.scenees;
 
-import at.petrak.hexcasting.api.casting.iota.BooleanIota;
-import at.petrak.hexcasting.api.casting.iota.DoubleIota;
-import at.petrak.hexcasting.api.casting.iota.Vec3Iota;
+import at.petrak.hexcasting.api.casting.iota.*;
+import at.petrak.hexcasting.api.casting.math.HexDir;
+import at.petrak.hexcasting.api.casting.math.HexPattern;
 import at.petrak.hexcasting.common.lib.HexItems;
 import com.simibubi.create.foundation.ponder.*;
 import net.minecraft.block.Blocks;
@@ -15,7 +15,10 @@ import net.minecraft.item.Items;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Vec3d;
+import pub.pigeon.yggdyy.hexcreating.cast.iota.TranslateIota;
 import pub.pigeon.yggdyy.hexcreating.create.ponder.HexPonderUtils;
+
+import java.util.List;
 
 public class HexIntroductionScenes {
     public static int A_LONG_TIME = 20 * 60 * 10;
@@ -292,5 +295,64 @@ public class HexIntroductionScenes {
         vector4.show(A_LONG_TIME);
         scene.overlay.showText(100).text("For example, this vector (1, 1.5, 0.5), is the result of (2, 3, 1) * 0.5").pointAt(new Vec3d(1, 1.5, 0.5)).placeNearTarget();
         scene.idle(105);
+    }
+    public static void stack(SceneBuilder scene, SceneBuildingUtil util) {
+        scene.title("stack", "The Information Storage Space - Stack");
+        scene.configureBasePlate(0, 0, 5);
+        scene.scaleSceneView(1);
+        scene.setSceneOffsetY(-4f);
+        scene.world.showSection(util.select.layer(0), Direction.UP);
+        HexPonderUtils.StackDisplay stack = new HexPonderUtils.StackDisplay(scene, util, util.grid.at(4, 0, 0));
+        Iota iota1 = new ListIota(List.of()),
+                iota2 = new PatternIota(HexPattern.fromAngles("qaq", HexDir.NORTH_EAST)),
+                iota3 = new GarbageIota(),
+                iota4 = new NullIota(),
+                iota5 = new TranslateIota("entity.minecraft.villager"),
+                iota6 = new Vec3Iota(new Vec3d(2, 3, 1)),
+                iota7 = new DoubleIota(1437),
+                iota8 = new BooleanIota(true);
+
+        scene.overlay.showText(60).attachKeyFrame().text("The Iotas you get are stored in a place called a stack.");
+        scene.idle(65);
+        scene.overlay.showText(60).text("You can think a stack as a pillar of blocks, each block represents a iota.");
+        scene.idle(5);
+        stack.push(iota1, A_LONG_TIME);
+        scene.idle(5);
+        stack.push(iota2, A_LONG_TIME);
+        scene.idle(5);
+        stack.push(iota3, A_LONG_TIME);
+        scene.idle(5);
+        stack.push(iota4, A_LONG_TIME);
+        scene.idle(5);
+        stack.push(iota5, A_LONG_TIME);
+        scene.idle(5);
+        stack.push(iota6, A_LONG_TIME);
+        scene.idle(5);
+        stack.push(iota7, 415);
+        scene.idle(30);
+
+        scene.overlay.showText(115).attachKeyFrame().pointAt(stack.tipPos(1)).text("The top one iota is called [the top of the stack] or [the first of the stack top]");
+        scene.idle(65);
+        scene.overlay.showText(50).pointAt(stack.tipPos(2)).text("Similarly, this iota is called [the second of the stack top]");
+        scene.idle(55);
+
+        scene.overlay.showText(A_LONG_TIME).attachKeyFrame().text("When adding iota into the stack, or taking iota out of the stack, you need to follow some rules...");
+        scene.idle(30);
+        stack.push(iota8, 140);
+        scene.idle(10);
+        scene.overlay.showText(60).attachKeyFrame().pointAt(stack.tipPos(1)).text("When adding a iota, you should add it to the top.");
+        scene.idle(65);
+        scene.overlay.showText(40).pointAt(stack.tipPos(2)).text("You can't add it to anywhere else").colored(PonderPalette.RED);
+        scene.idle(45);
+        scene.overlay.showText(60).attachKeyFrame().pointAt(stack.tipPos(1)).text("When taking out a iota, you can only take the top one");
+        scene.idle(20);
+        stack.pop();
+        scene.idle(45);
+        scene.overlay.showText(50).pointAt(stack.tipPos(2)).text("Now you can't take this out").colored(PonderPalette.RED);
+        scene.idle(55);
+        scene.overlay.showText(50).pointAt(stack.tipPos(1)).text("But this can").colored(PonderPalette.GREEN);
+        scene.idle(20);
+        stack.pop();
+        scene.idle(35);
     }
 }

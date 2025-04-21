@@ -135,5 +135,17 @@
 
   "item.hexcreating.thought_key.stack": "思维之匙-Iota的存储空间之栈",
   "hexcreating.ponder.stack.header": "秩序井然的存储空间-栈",
-  "hexcreating.page.ponder.stack": "你施法所用的信息（Iota）就存储在这个叫做栈的信息存储空间里面"
+  "hexcreating.ponder.stack.text_1": "你所获得到的Iota都被存放在一个叫“栈”的存储空间中",
+  "hexcreating.ponder.stack.text_2": "你可以把栈理解为一个方块柱子，每个方块对应一个Iota",
+  "hexcreating.ponder.stack.text_3": "最上面这个Iota可以被叫做”栈顶“，或者”栈顶第一个Iota“",
+  "hexcreating.ponder.stack.text_4": "类似的，下面这个被称为“栈顶第二个Iota”",
+  "hexcreating.ponder.stack.text_5": "当向栈中加入或取出Iota时，你需要遵守严格的规则...",
+  "hexcreating.ponder.stack.text_6": "当加入Iota时，你只能加在最上面",
+  "hexcreating.ponder.stack.text_7": "而不能是其他别的地方",
+  "hexcreating.ponder.stack.text_8": "当取出Iota时，你也只能从最上面开始取",
+  "hexcreating.ponder.stack.text_9": "现在你不能直接取出这个Iota",
+  "hexcreating.ponder.stack.text_10": "但这个可以",
+  "hexcreating.page.ponder.stack": "你施法所用的信息（Iota）就存储在这个叫做栈的信息存储空间里面",
+
+  "hexcreating.page.ponder.media": "在继续思索之前，你最好去阅读下这本书上关于媒质的部分。$(br)相信我，这一部分你肯定看得懂。"
 }
