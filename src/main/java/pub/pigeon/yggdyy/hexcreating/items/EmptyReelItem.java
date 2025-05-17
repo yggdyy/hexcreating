@@ -14,6 +14,7 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.World;
 import pub.pigeon.yggdyy.hexcreating.api.iotawire.IIotaWireConnectorHost;
 import pub.pigeon.yggdyy.hexcreating.api.iotawire.IotaWireProcessor;
+import pub.pigeon.yggdyy.hexcreating.libs.PlayerInventoryHelper;
 
 public class EmptyReelItem extends Item {
 
@@ -87,7 +88,8 @@ public class EmptyReelItem extends Item {
                     if(IotaWireProcessor.tryDisConnect2Connectors((ServerWorld) world, pos0, id0, pos1, id1)) {
                         if(!playerEntity.isCreative()) {
                             stack.setCount(stack.getCount() - 1);
-                            playerEntity.giveItemStack(new ItemStack(ModItems.IOTA_WIRE_REEL));
+                            //playerEntity.giveItemStack(new ItemStack(ModItems.IOTA_WIRE_REEL));
+                            PlayerInventoryHelper.giveOrDrop(playerEntity, new ItemStack(ModItems.IOTA_WIRE_REEL));
                         }
                         playerEntity.sendMessage(Text.translatable("hexcreating.iota_wire_reel.success"));
                         return TypedActionResult.consume(stack);

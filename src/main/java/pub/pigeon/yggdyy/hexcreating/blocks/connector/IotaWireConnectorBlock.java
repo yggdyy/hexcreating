@@ -26,6 +26,7 @@ import pub.pigeon.yggdyy.hexcreating.api.iotawire.IotaWireProcessor;
 import pub.pigeon.yggdyy.hexcreating.blocks.ModBlockEntities;
 import pub.pigeon.yggdyy.hexcreating.items.ModItems;
 import pub.pigeon.yggdyy.hexcreating.libs.IotaWireConnectorPropertyHelper;
+import pub.pigeon.yggdyy.hexcreating.libs.PlayerInventoryHelper;
 
 public class IotaWireConnectorBlock extends Block implements IBE<IotaWireConnectorBlockEntity>, IWrenchable {
     public static BooleanProperty UP = BooleanProperty.of("up"), DOWN = BooleanProperty.of("down"), NORTH = BooleanProperty.of("north"), SOUTH = BooleanProperty.of("south"), WEST = BooleanProperty.of("west"), EAST = BooleanProperty.of("east");
@@ -113,7 +114,7 @@ public class IotaWireConnectorBlock extends Block implements IBE<IotaWireConnect
                     IotaWireProcessor.tryGetConnector((ServerWorld) context.getWorld(), context.getBlockPos(), IotaWireConnectorPropertyHelper.getTerminalIdByProperty(property)).disConnectAll();
                     //HexcreatingMain.LOGGER.info("ok");
                     context.getWorld().setBlockState(context.getBlockPos(), state.with(property, false));
-                    if(context.getPlayer() != null && !context.getPlayer().isCreative()) context.getPlayer().giveItemStack(new ItemStack(ModItems.IOTA_WIRE_CONNECTOR));
+                    if(context.getPlayer() != null && !context.getPlayer().isCreative()) PlayerInventoryHelper.giveOrDrop(context.getPlayer(), new ItemStack(ModItems.IOTA_WIRE_CONNECTOR));//context.getPlayer().giveItemStack(new ItemStack(ModItems.IOTA_WIRE_CONNECTOR));
                     boolean flag = false;
                     for(var _property : pList) {
                         flag = flag || state.with(property, false).get(_property);
