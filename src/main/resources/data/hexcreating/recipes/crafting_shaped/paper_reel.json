@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "PEP",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "minecraft:paper"
+    },
+    "E": {
+      "item": "hexcreating:empty_reel"
+    }
+  },
+  "result": {
+    "item": "hexcreating:paper_reel",
+    "count": 1
+  }
+}

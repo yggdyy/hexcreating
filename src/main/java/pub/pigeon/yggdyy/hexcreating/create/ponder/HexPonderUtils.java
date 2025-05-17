@@ -27,6 +27,7 @@ import java.util.List;
 import java.util.Map;
 
 public class HexPonderUtils {
+    public static final int A_LONG_TIME = 20 * 60 * 10;
     public static class IotaDisplay {
         public SceneBuilder scene;
         public SceneBuildingUtil util;
@@ -179,11 +180,11 @@ public class HexPonderUtils {
             this.scene = scene; this.util = util;
 
             Vec3d nowPos = o; int nowIndex = DIR2INDEX.get(pattern.getStartDir());
-            strokes.add(new ArrowDisplay(scene, util).start(nowPos).end(nowPos.add(makeVec3(INDEX2OFFSET.get(nowIndex))).add(z.multiply(0.01))).size(x.length() / 8.0));
+            strokes.add(new ArrowDisplay(scene, util).start(nowPos).end(nowPos.add(makeVec3(INDEX2OFFSET.get(nowIndex))).add(z.multiply(0.01))).size(x.length() / 16.0));
             nowPos = nowPos.add(makeVec3(INDEX2OFFSET.get(nowIndex)));
             for(var i : pattern.getAngles()) {
                 nowIndex = (nowIndex + ANGLE2INDEX.get(i)) % M;
-                strokes.add(new ArrowDisplay(scene, util).start(nowPos).end(nowPos.add(makeVec3(INDEX2OFFSET.get(nowIndex))).add(z.multiply(0.01))).size(x.length() / 8.0));
+                strokes.add(new ArrowDisplay(scene, util).start(nowPos).end(nowPos.add(makeVec3(INDEX2OFFSET.get(nowIndex))).add(z.multiply(0.01))).size(x.length() / 16.0));
                 nowPos = nowPos.add(makeVec3(INDEX2OFFSET.get(nowIndex)));
             }
         }
@@ -206,6 +207,7 @@ public class HexPonderUtils {
             for(int i = 0; i < strokes.size(); ++i) {
                 PonderPalette nowColor = i < colors.size()? colors.get(i) : colors.get(colors.size() - 1);
                 strokes.get(i).color(nowColor, nowColor).show(duration - i * per);
+                scene.idle(per);
             }
         }
         public void show(int duration, int per, PonderPalette color) {
@@ -217,5 +219,7 @@ public class HexPonderUtils {
         public void show(int duration, PonderPalette color) {
             show(duration, 0, List.of(color));
         }
+        public void show(int duration, int per) {show(duration, per, List.of(PonderPalette.GREEN, PonderPalette.FAST));}
+        public void show(int duration) {show(duration, 0);}
     }
 }

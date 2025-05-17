@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=south": {
+      "model": "hexcreating:block/board"
+    },
+    "facing=north": {
+      "model": "hexcreating:block/board",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "hexcreating:block/board",
+      "y": 270
+    },
+    "facing=west": {
+      "model": "hexcreating:block/board",
+      "y": 90
+    }
+  }
+}

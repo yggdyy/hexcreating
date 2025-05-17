@@ -39,6 +39,11 @@
     {
       "type": "patchouli:text",
       "text": "hexcreating.page.ponder.media"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "hexcreating:crafting_shaped/thought_key/pattern_spell_1",
+      "text": "hexcreating.page.ponder.pattern_spell_1"
     }
   ]
 }

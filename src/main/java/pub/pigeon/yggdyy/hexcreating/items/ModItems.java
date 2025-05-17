@@ -17,6 +17,9 @@ public class ModItems {
     public static Item IOTA_WIRE = register("iota_wire", new Item(new Item.Settings()));
     public static RawSoulItem RAW_SOUL = register("raw_soul", new RawSoulItem(new Item.Settings().fireproof()));
     public static SequencedAssemblyItem UNFINISHED_TRAIN_GATE_FRAME = register("unfinished_train_gate_frame", new SequencedAssemblyItem(new Item.Settings().maxCount(1)));
+    public static SquareItem SQUARE = register("square", new SquareItem(new Item.Settings()));
+    public static PrintedPaperItem PRINTED_PAPER = register("printed_paper", new PrintedPaperItem(new Item.Settings()));
+    public static PaperReelItem PAPER_REEL = register("paper_reel", new PaperReelItem(new Item.Settings().maxCount(1).maxDamage(1024)));
 
     public static void init() {
         CREATE_REGISTRATE.register();

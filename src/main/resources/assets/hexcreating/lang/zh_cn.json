@@ -147,5 +147,22 @@
   "hexcreating.ponder.stack.text_10": "但这个可以",
   "hexcreating.page.ponder.stack": "你施法所用的信息（Iota）就存储在这个叫做栈的信息存储空间里面",
 
-  "hexcreating.page.ponder.media": "在继续思索之前，你最好去阅读下这本书上关于媒质的部分。$(br)相信我，这一部分你肯定看得懂。"
+  "hexcreating.page.ponder.media": "在继续思索之前，你最好去阅读下这本书上关于媒质的部分。$(br)相信我，这一部分你肯定看得懂。",
+
+  "hexcreating.page.ponder.pattern_spell_1": "现在你可以来真正的学习如何施法了。$(br)建议九宫格内的思维之匙按照从左到右，从上到下的顺序看，都看完后再看右边那个。$(br)学会这些你将会获得一种挺好看的木材qwq",
+
+  "item.hexcreating.thought_key.pattern_introduction": "思维之匙-如何绘制图案",
+
+  "item.hexcreating.thought_key.pattern_locate": "思维之匙-图案之定位与实体",
+
+  "item.hexcreating.thought_key.pattern_constants": "思维之匙-图案之常数常量",
+
+  "item.hexcreating.thought_key.pattern_calculate": "思维之匙-图案之计算",
+
+  "item.hexcreating.thought_key.pattern_spell_1": "思维之匙-法术之启迪树苗",
+
+  "block.hexcreating.board": "排字板",
+  "item.hexcreating.square": "活字",
+  "item.hexcreating.printed_paper": "印纸",
+  "item.hexcreating.paper_reel": "纸卷"
 }

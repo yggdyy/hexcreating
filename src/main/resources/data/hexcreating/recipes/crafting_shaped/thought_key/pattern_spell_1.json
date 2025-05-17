@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABC",
+    "D  ",
+    "   "
+  ],
+  "key": {
+    "A": {
+      "item": "hexcreating:thought_key/pattern_introduction"
+    },
+    "B": {
+      "item": "hexcreating:thought_key/pattern_locate"
+    },
+    "C": {
+      "item": "hexcreating:thought_key/pattern_constants"
+    },
+    "D": {
+      "item": "hexcreating:thought_key/pattern_calculate"
+    }
+  },
+  "result": {
+    "item": "hexcreating:thought_key/pattern_spell_1"
+  }
+}

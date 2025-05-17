@@ -5,13 +5,16 @@
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "BlazeBurnerBlockEntityAccessor",
-    "FillingBySpoutMixin",
-    "GenericItemEmptyingMixin",
     "CircleCastInvAccessor",
-    "TextWindowElementAccessor",
-    "SceneBuilderAccessor"
+    "FillingBySpoutMixin",
+    "GenericItemEmptyingMixin"
   ],
-  "client": [],
+  "client": [
+    "ItemRendererMixin",
+    "SceneBuilderAccessor",
+    "TextWindowElementAccessor",
+    "BookTextParserAccessor"
+  ],
   "server": [],
   "injectors": {
     "defaultRequire": 1

@@ -8,6 +8,7 @@ import pub.pigeon.yggdyy.hexcreating.HexcreatingMain;
 import pub.pigeon.yggdyy.hexcreating.blocks.analyticalengine.entities.AnalyticalEngineALUBlockEntity;
 import pub.pigeon.yggdyy.hexcreating.blocks.analyticalengine.entities.AnalyticalEngineControllerBlockEntity;
 import pub.pigeon.yggdyy.hexcreating.blocks.analyticalengine.entities.AnalyticalEngineKineticInterfaceBlockEntity;
+import pub.pigeon.yggdyy.hexcreating.blocks.board.BoardBlockEntity;
 import pub.pigeon.yggdyy.hexcreating.blocks.circle_amplifier.CircleAmplifierBlockEntity;
 import pub.pigeon.yggdyy.hexcreating.blocks.circle_inputer.CircleInputerBlockEntity;
 import pub.pigeon.yggdyy.hexcreating.blocks.circle_outputer.CircleOutputerBlockEntity;
@@ -66,6 +67,10 @@ public class ModBlockEntities {
     public static final BlockEntityType<TrainGateCoreBlockEntity> TRAIN_GATE_CORE = register(
             "train_gate_core",
             BlockEntityType.Builder.create(TrainGateCoreBlockEntity::new, ModBlocks.INSTANCE.getTRAIN_GATE_CORE()).build(null)
+    );
+    public static final BlockEntityType<BoardBlockEntity> BOARD = register(
+            "board",
+            BlockEntityType.Builder.create(BoardBlockEntity::new, ModBlocks.INSTANCE.getBOARD()).build(null)
     );
 
     public static <T extends BlockEntityType<?>> T register(String path, T blockEntityType) {

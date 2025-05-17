@@ -11,6 +11,7 @@ import net.minecraft.registry.Registry
 import net.minecraft.util.Identifier
 import pub.pigeon.yggdyy.hexcreating.HexcreatingMain
 import pub.pigeon.yggdyy.hexcreating.blocks.analyticalengine.blocks.*
+import pub.pigeon.yggdyy.hexcreating.blocks.board.BoardBlock
 import pub.pigeon.yggdyy.hexcreating.blocks.circle_amplifier.CircleAmplifierBlock
 import pub.pigeon.yggdyy.hexcreating.blocks.circle_inputer.CircleInputerBlock
 import pub.pigeon.yggdyy.hexcreating.blocks.circle_outputer.CircleOutputerBlock
@@ -38,6 +39,7 @@ object ModBlocks {
     val TRAIN_GATE: Block = register("train_gate", TrainGateBlock(AbstractBlock.Settings.copy(Blocks.NETHER_PORTAL)), false)
     val TRAIN_GATE_FRAME: Block = register("train_gate_frame", TrainGateFrameBlock(AbstractBlock.Settings.copy(AllBlocks.RAILWAY_CASING.get())))
     val TRAIN_GATE_CORE: Block = register("train_gate_core", TrainGateCoreBlock(AbstractBlock.Settings.copy(TRAIN_GATE_FRAME)))
+    val BOARD: Block = register("board", BoardBlock(AbstractBlock.Settings.copy(Blocks.POLISHED_DEEPSLATE)))
 
     private fun register(name: String, block: Block, withItem: Boolean = true): Block {
         val id: Identifier = Identifier(HexcreatingMain.MOD_ID, name)
