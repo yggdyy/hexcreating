@@ -33,6 +33,7 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import pub.pigeon.yggdyy.hexcreating.blocks.ModBlockEntities;
 import pub.pigeon.yggdyy.hexcreating.items.ModItems;
+import pub.pigeon.yggdyy.hexcreating.libs.PlayerInventoryHelper;
 
 import java.util.List;
 
@@ -88,7 +89,8 @@ public class BoardBlock extends Block implements IBE<BoardBlockEntity>, IWrencha
             };
             if((todo & SIMPLE_REMOVE) > 0) {
                 if(pStack.isEmpty() && !bStack.isEmpty()) {
-                    playerEntity.giveItemStack(bStack.split(1));
+                    //playerEntity.giveItemStack(bStack.split(1));
+                    PlayerInventoryHelper.giveOrDrop(playerEntity, bStack.split(1));
                     be.sync();
                 }
             } if((todo & SECTION_REMOVE) > 0) {
@@ -98,7 +100,8 @@ public class BoardBlock extends Block implements IBE<BoardBlockEntity>, IWrencha
                         for(int i = section.l; i <= section.r; ++i) {
                             var nowStack = connected.getSlotHandler(i).getStack();
                             if(nowStack.isEmpty()) continue;
-                            playerEntity.giveItemStack(nowStack.copy());
+                            //playerEntity.giveItemStack(nowStack.copy());
+                            PlayerInventoryHelper.giveOrDrop(playerEntity, nowStack.copy());
                             connected.getSlotHandler(i).setStack(ItemStack.EMPTY);
                         }
                     }
@@ -127,7 +130,8 @@ public class BoardBlock extends Block implements IBE<BoardBlockEntity>, IWrencha
                             ModItems.PAPER_REEL.setMedia(pStack, ModItems.PAPER_REEL.getMedia(pStack) - iotas.size() * MediaConstants.DUST_UNIT / 100L);
                             ItemStack copied = ModItems.PRINTED_PAPER.getDefaultStack();
                             ModItems.PRINTED_PAPER.writeDatum(copied, new ListIota(iotas));
-                            playerEntity.giveItemStack(copied);
+                            //playerEntity.giveItemStack(copied);
+                            PlayerInventoryHelper.giveOrDrop(playerEntity, copied);
                         }
                     }
                 }
