@@ -7,6 +7,10 @@ import at.petrak.hexcasting.common.lib.HexSounds;
 import com.simibubi.create.content.equipment.wrench.IWrenchable;
 import com.simibubi.create.foundation.block.IBE;
 import kotlin.Triple;
+import net.fabricmc.fabric.api.transfer.v1.item.ItemVariant;
+import net.fabricmc.fabric.api.transfer.v1.item.PlayerInventoryStorage;
+import net.fabricmc.fabric.api.transfer.v1.storage.Storage;
+import net.fabricmc.fabric.api.transfer.v1.transaction.Transaction;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ShapeContext;
@@ -16,10 +20,11 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.Properties;
+import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
@@ -35,6 +40,7 @@ import pub.pigeon.yggdyy.hexcreating.blocks.ModBlockEntities;
 import pub.pigeon.yggdyy.hexcreating.items.ModItems;
 import pub.pigeon.yggdyy.hexcreating.libs.PlayerInventoryHelper;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class BoardBlock extends Block implements IBE<BoardBlockEntity>, IWrenchable {
@@ -139,6 +145,49 @@ public class BoardBlock extends Block implements IBE<BoardBlockEntity>, IWrencha
                 if(be.isItemStackLegal(pStack) && bStack.isEmpty()) {
                     be.setStack(slot, pStack.split(1));
                     be.sync();
+                }
+            } if((todo & SECTION_PASTE) > 0) {
+                for(var plaster : AllBoardPasters.pasters) {
+                    if(plaster.canHandle(pStack, (ServerWorld) world)) {
+                        var res = plaster.getResult(pStack, (ServerWorld) world);
+                        connected.genStorages();
+                        List<Storage<ItemVariant>> storages = new ArrayList<>(connected.storages);
+                        storages.add(PlayerInventoryStorage.of(playerEntity));
+                        for(int step = 0; step < res.size(); ++step) {
+                            var handler = connected.getSlotHandler(connected.getIndex(blockPos, slot) + step);
+                            var matcher = res.get(step);
+                            if(handler == null) {
+                                playerEntity.sendMessage(Text.translatable("hexcreating.board.paster.no_space", step));
+                                break;
+                            }
+                            if(handler.match(matcher)) continue;
+                            if(!handler.getStack().isEmpty()) {
+                                playerEntity.sendMessage(Text.translatable("hexcreating.board.paster.no_space", step));
+                                break;
+                            }
+                            var matches = matcher.get();
+                            boolean flag = false;
+                            for(var storage : storages) {
+                                for(var match : matches) {
+                                    try (Transaction tc = Transaction.openOuter()) {
+                                        long amount = storage.extract(ItemVariant.of(match.getLeft()), 1L, tc);
+                                        if(amount > 0) {
+                                            handler.setStack(match.getRight());
+                                            flag = true;
+                                            tc.commit();
+                                        }
+                                    }
+                                    if(flag) break;
+                                }
+                                if(flag) break;
+                            }
+                            if(!flag) {
+                                playerEntity.sendMessage(Text.translatable("hexcreating.board.paster.no_item", step));
+                                break;
+                            }
+                        }
+                        break;
+                    }
                 }
             }
         }

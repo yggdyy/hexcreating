@@ -11,6 +11,7 @@ import net.minecraft.registry.Registry
 import net.minecraft.util.Identifier
 import pub.pigeon.yggdyy.hexcreating.HexcreatingMain
 import pub.pigeon.yggdyy.hexcreating.blocks.analyticalengine.blocks.*
+import pub.pigeon.yggdyy.hexcreating.blocks.board.AllBoardPasters
 import pub.pigeon.yggdyy.hexcreating.blocks.board.BoardBlock
 import pub.pigeon.yggdyy.hexcreating.blocks.circle_amplifier.CircleAmplifierBlock
 import pub.pigeon.yggdyy.hexcreating.blocks.circle_inputer.CircleInputerBlock
@@ -48,6 +49,7 @@ object ModBlocks {
         }
         return Registry.register(Registries.BLOCK, id, block);
     }
-
-    public fun init() {}
+    public fun init() {
+        AllBoardPasters.init()
+    }
 }

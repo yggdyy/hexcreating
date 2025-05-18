@@ -164,5 +164,7 @@
   "block.hexcreating.board": "排字板",
   "item.hexcreating.square": "活字",
   "item.hexcreating.printed_paper": "印纸",
-  "item.hexcreating.paper_reel": "纸卷"
+  "item.hexcreating.paper_reel": "纸卷",
+  "hexcreating.board.paster.no_space": "在放置下标为%d的图案时发现没有所需空间！",
+  "hexcreating.board.paster.no_item": "在放置下标为%d的图案时发现没有所需物品！"
 }

@@ -2,12 +2,16 @@ package pub.pigeon.yggdyy.hexcreating.blocks.board;
 
 import at.petrak.hexcasting.api.casting.iota.Iota;
 import at.petrak.hexcasting.api.item.IotaHolderItem;
+import net.fabricmc.fabric.api.transfer.v1.item.ItemStorage;
+import net.fabricmc.fabric.api.transfer.v1.item.ItemVariant;
+import net.fabricmc.fabric.api.transfer.v1.storage.Storage;
 import net.minecraft.block.BlockState;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Pair;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.Vec3i;
 import net.minecraft.world.World;
@@ -23,6 +27,7 @@ public class BoardConnected {
     public World world;
     public Vec3i x, y;
     public BlockState state;
+    public List<Storage<ItemVariant>> storages = new ArrayList<>(List.of());
     public List<Pair<BlockPos, Integer>> slots = new ArrayList<>(List.of());
     public BoardConnected(World world, BlockPos pos, BlockState state) {
         this.world = world;
@@ -122,6 +127,13 @@ public class BoardConnected {
             if(be == null) return;
             be.setStack(slot, stack);
         }
+        public boolean match(AllBoardPasters.IItemStackMatcher matcher) {
+            ItemVariant v1 = ItemVariant.of(be.getStack(slot));
+            for(var p : matcher.get()) {
+                if(v1.matches(p.getRight())) return true;
+            }
+            return false;
+        }
     }
     public int getIndex(BlockPos pos, int slot) {
         for(int i = 0; i < slots.size(); ++i) {
@@ -167,5 +179,16 @@ public class BoardConnected {
         --r;
         if(index <= r) return new Section(this, index, r);
         return null;
+    }
+    public void genStorages() {
+        if(this.storages.size() == 0) {
+            Vec3i _f = x.crossProduct(y);
+            Direction _d = Direction.fromVector(_f.getX(), _f.getY(), _f.getZ()).getOpposite();
+            for(var bp : blockPoses) {
+               var np = bp.add(_f);
+               Storage<ItemVariant> nowStorage = ItemStorage.SIDED.find(world, np, _d);
+               if(nowStorage != null) storages.add(nowStorage);
+            }
+        }
     }
 }

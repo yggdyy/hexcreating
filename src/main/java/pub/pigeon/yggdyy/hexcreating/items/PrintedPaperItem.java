@@ -18,7 +18,7 @@ public class PrintedPaperItem extends Item implements IotaHolderItem {
     public PrintedPaperItem(Settings settings) {
         super(settings);
     }
-    private static final String IOTA_KEY = "iota";
+    public static final String IOTA_KEY = "iota";
     @Override
     public @Nullable NbtCompound readIotaTag(ItemStack stack) {
         return NBTHelper.getCompound(stack, IOTA_KEY);
