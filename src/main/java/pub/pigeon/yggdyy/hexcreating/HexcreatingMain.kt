@@ -13,6 +13,7 @@ import pub.pigeon.yggdyy.hexcreating.create.train.ModPortalTracks
 import pub.pigeon.yggdyy.hexcreating.fluids.ModFluids
 import pub.pigeon.yggdyy.hexcreating.items.ModItems
 import pub.pigeon.yggdyy.hexcreating.listeners.ModEventListeners
+import pub.pigeon.yggdyy.hexcreating.network.C2S.ModC2SPackHandlers
 
 object HexcreatingMain : ModInitializer {
 	const val MOD_ID = "hexcreating"
@@ -32,5 +33,6 @@ object HexcreatingMain : ModInitializer {
 		BlockStressValues.registerProvider(MOD_ID, ModStressValueProvider())
 		ModPortalTracks.init();
 		ModIotaTypes.init();
+		ModC2SPackHandlers.init();
 	}
 }

@@ -15,6 +15,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pub.pigeon.yggdyy.hexcreating.blocks.ModBlockEntities;
 import pub.pigeon.yggdyy.hexcreating.blocks.ModBlocks;
+import pub.pigeon.yggdyy.hexcreating.client.key.ModKeyBindings;
 import pub.pigeon.yggdyy.hexcreating.client.render.BoardRenderer;
 import pub.pigeon.yggdyy.hexcreating.client.render.CircleAmplifierRenderer;
 import pub.pigeon.yggdyy.hexcreating.client.render.IotaWireConnectorRenderer;
@@ -71,5 +72,8 @@ public class HexcreatingClient implements ClientModInitializer {
         BoardExplainHandler boardExplainHandler = new BoardExplainHandler();
         ClientTickEvents.END_CLIENT_TICK.register(boardExplainHandler);
         HudRenderCallback.EVENT.register(boardExplainHandler);
+
+        //keys
+        ModKeyBindings.init();
     }
 }

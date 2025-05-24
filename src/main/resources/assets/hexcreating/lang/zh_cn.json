@@ -1,4 +1,6 @@
 {
+  "category.hexcreating.default": "咒法动力与机械学",
+
   "mishaps.need_blaze_burner_with_blaze": "内含烈焰人的烈焰人燃烧室",
   "mishaps.need_blaze_burner": "烈焰人燃烧室",
   "hexcasting.action.hexcreating:kelvin_heat_gambit": "开尔文之策略-Δ",
@@ -172,5 +174,6 @@
   "hexcreating.page.board.0": "相信你肯定觉得撰写法术是一件折磨的事情，特别是在内省和反思之间写图案列表的时候，任何小错误都需要麻烦的修理。$(br)那么，不如来试一试排字板和活字吧。",
   "hexcreating.page.board.1": "上面那个合成表里的空线轴可以用凝灰岩在切石机里面切制而成",
 
-  "block.hexcreating.amethyst_lamp": "紫水晶灯"
+  "block.hexcreating.amethyst_lamp": "紫水晶灯",
+  "key.hexcreating.control_amethyst_lamp": "控制紫水晶灯"
 }
