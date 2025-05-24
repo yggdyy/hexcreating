@@ -1,0 +1,25 @@
+{
+  "name": "hexcreating.page.board.title",
+  "icon": "hexcreating:board",
+  "category": "hexcasting:items",
+  "advancement": "hexcasting:root",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "hexcreating:board"
+      },
+      "text": "hexcreating.page.board.0"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "hexcreating:crafting_shaped/board",
+      "recipe2": "hexcreating:crafting_shaped/square"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "hexcreating:crafting_shaped/paper_reel",
+      "text": "hexcreating.page.board.1"
+    }
+  ]
+}

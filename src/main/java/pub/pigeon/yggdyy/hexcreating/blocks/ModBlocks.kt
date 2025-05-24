@@ -10,6 +10,7 @@ import net.minecraft.registry.Registries
 import net.minecraft.registry.Registry
 import net.minecraft.util.Identifier
 import pub.pigeon.yggdyy.hexcreating.HexcreatingMain
+import pub.pigeon.yggdyy.hexcreating.blocks.amethyst_lamp.AmethystLampBlock
 import pub.pigeon.yggdyy.hexcreating.blocks.analyticalengine.blocks.*
 import pub.pigeon.yggdyy.hexcreating.blocks.board.AllBoardPasters
 import pub.pigeon.yggdyy.hexcreating.blocks.board.BoardBlock
@@ -41,6 +42,8 @@ object ModBlocks {
     val TRAIN_GATE_FRAME: Block = register("train_gate_frame", TrainGateFrameBlock(AbstractBlock.Settings.copy(AllBlocks.RAILWAY_CASING.get())))
     val TRAIN_GATE_CORE: Block = register("train_gate_core", TrainGateCoreBlock(AbstractBlock.Settings.copy(TRAIN_GATE_FRAME)))
     val BOARD: Block = register("board", BoardBlock(AbstractBlock.Settings.copy(Blocks.POLISHED_DEEPSLATE)))
+    //val AMETHYST_LEVER: Block = register("amethyst_lever", AmethystLeverBlock(AbstractBlock.Settings.copy(AllBlocks.ANALOG_LEVER.get())))
+    val AMETHYST_LAMP: Block = register("amethyst_lamp", AmethystLampBlock(AbstractBlock.Settings.copy(Blocks.AMETHYST_BLOCK)));
 
     private fun register(name: String, block: Block, withItem: Boolean = true): Block {
         val id: Identifier = Identifier(HexcreatingMain.MOD_ID, name)

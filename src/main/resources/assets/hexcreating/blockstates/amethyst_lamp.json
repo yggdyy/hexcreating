@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "power=0": { "model": "hexcreating:block/amethyst_lamp/0" },
+    "power=1": { "model": "hexcreating:block/amethyst_lamp/1" },
+    "power=2": { "model": "hexcreating:block/amethyst_lamp/2" },
+    "power=3": { "model": "hexcreating:block/amethyst_lamp/3" },
+    "power=4": { "model": "hexcreating:block/amethyst_lamp/4" },
+    "power=5": { "model": "hexcreating:block/amethyst_lamp/5" },
+    "power=6": { "model": "hexcreating:block/amethyst_lamp/6" },
+    "power=7": { "model": "hexcreating:block/amethyst_lamp/7" },
+    "power=8": { "model": "hexcreating:block/amethyst_lamp/8" },
+    "power=9": { "model": "hexcreating:block/amethyst_lamp/9" },
+    "power=10": { "model": "hexcreating:block/amethyst_lamp/10" },
+    "power=11": { "model": "hexcreating:block/amethyst_lamp/11" },
+    "power=12": { "model": "hexcreating:block/amethyst_lamp/12" },
+    "power=13": { "model": "hexcreating:block/amethyst_lamp/13" },
+    "power=14": { "model": "hexcreating:block/amethyst_lamp/14" },
+    "power=15": { "model": "hexcreating:block/amethyst_lamp/15" }
+  }
+}

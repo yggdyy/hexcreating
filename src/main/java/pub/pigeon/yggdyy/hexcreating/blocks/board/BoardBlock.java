@@ -45,7 +45,7 @@ import java.util.List;
 
 public class BoardBlock extends Block implements IBE<BoardBlockEntity>, IWrenchable {
     public BoardBlock(Settings settings) {
-        super(settings);
+        super(settings.luminance(state -> 15));
     }
     @Override
     public Class<BoardBlockEntity> getBlockEntityClass() {
@@ -90,6 +90,8 @@ public class BoardBlock extends Block implements IBE<BoardBlockEntity>, IWrencha
                 case 1 -> SIMPLE_PUT | SECTION_REMOVE | SECTION_COPY | SECTION_PASTE; // bulk delete
                 case 2 -> SIMPLE_PUT | SECTION_LEFT | SECTION_COPY | SECTION_PASTE; // move left
                 case 3 -> SIMPLE_PUT | SECTION_RIGHT | SECTION_COPY | SECTION_PASTE; // move right
+                case 4 -> SIMPLE_PUT | SECTION_UP | SECTION_COPY | SECTION_PASTE;
+                case 5 -> SIMPLE_PUT | SECTION_DOWN | SECTION_COPY | SECTION_PASTE;
                 case 15 -> SECTION_COPY; // static
                 default -> SECTION_COPY;
             };
@@ -124,6 +126,22 @@ public class BoardBlock extends Block implements IBE<BoardBlockEntity>, IWrencha
                     BoardConnected.Section section = connected.getRight(connected.getIndex(blockPos, slot));
                     if(section != null) {
                         section.moveRight();
+                    }
+                }
+            } if((todo & SECTION_UP) > 0) {
+                if(pStack.isEmpty() && !bStack.isEmpty()) {
+                    BoardConnected.Section section = connected.getLeft(connected.getIndex(blockPos, slot));
+                    if(section != null) {
+                        int _s = connected.getSlotHandler(section.r).slot / 4;
+                        while(section.canMoveLeft() && connected.getSlotHandler(section.r).slot / 4 == _s) section.moveLeft();
+                    }
+                }
+            } if((todo & SECTION_DOWN) > 0) {
+                if(pStack.isEmpty() && !bStack.isEmpty()) {
+                    BoardConnected.Section section = connected.getRight(connected.getIndex(blockPos, slot));
+                    if(section != null) {
+                        int _s = connected.getSlotHandler(section.l).slot / 4;
+                        while(section.canMoveRight() && connected.getSlotHandler(section.l).slot / 4 == _s) section.moveRight();
                     }
                 }
             } if((todo & SECTION_COPY) > 0) {

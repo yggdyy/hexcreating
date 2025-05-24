@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PDP",
+    "DCD",
+    "PDP"
+  ],
+  "key": {
+    "C": {
+      "item": "hexcasting:charged_amethyst"
+    },
+    "D": {
+      "item": "minecraft:polished_diorite"
+    },
+    "P": {
+      "item": "minecraft:polished_deepslate"
+    }
+  },
+  "result": {
+    "item": "hexcreating:board",
+    "count": 4
+  }
+}

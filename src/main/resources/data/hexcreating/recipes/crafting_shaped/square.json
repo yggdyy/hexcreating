@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "QSQ"
+  ],
+  "key": {
+    "Q": {
+      "item": "minecraft:quartz"
+    },
+    "S": {
+      "item": "hexcasting:slate"
+    }
+  },
+  "result": {
+    "item": "hexcreating:square",
+    "count": 16
+  }
+}
