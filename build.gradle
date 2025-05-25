@@ -121,4 +121,5 @@ modrinth {
 		required.project "hex-casting"
 		required.project "create-fabric"
 	}
+	syncBodyFrom = rootProject.file("README.md").text
 }
