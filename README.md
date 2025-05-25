@@ -1,7 +1,7 @@
 # HexCreating
 An addon on fabric for both Create and Hexcasting.  
 Now in development.  
-![0](https://github.com/yggdyy/hexcreating/tree/main/readme_resource/0.png)  
+![0](https://github.com/yggdyy/hexcreating/blob/main/readme_resource/0.png)  
 ## Features  
 Note: Here only list completed features, since this mod is still in progress. And the features here are not comprehensive.  
 ### Boards and Squares  
