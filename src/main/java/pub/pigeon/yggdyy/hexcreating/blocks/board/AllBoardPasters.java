@@ -6,6 +6,7 @@ import at.petrak.hexcasting.api.casting.iota.ListIota;
 import at.petrak.hexcasting.api.casting.iota.PatternIota;
 import at.petrak.hexcasting.api.casting.math.HexDir;
 import at.petrak.hexcasting.api.casting.math.HexPattern;
+import at.petrak.hexcasting.common.lib.HexItems;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.Pair;
@@ -70,6 +71,42 @@ public class AllBoardPasters {
                     }
                 }
                 return res;
+            }
+        });
+        //slate
+        add(new BoardPaster() {
+            @Override
+            public boolean canHandle(ItemStack stack, ServerWorld world) {
+                return stack.isOf(HexItems.SLATE);
+            }
+            @Override
+            public List<IItemStackMatcher> getResult(ItemStack stack, ServerWorld world) {
+                ItemStackMatcher res = new ItemStackMatcher();
+                var iota = HexItems.SLATE.readIota(stack, world);
+                if(iota == null || !(iota instanceof PatternIota pIota)) return List.of(res);
+                String stroke = pIota.getPattern().anglesSignature();
+                ItemStack _s = new ItemStack(ModItems.SQUARE);
+                ModItems.SQUARE.writeDatum(_s, new PatternIota(pIota.getPattern()));
+                for(var dir : HexDir.values()) {
+                    HexPattern p = HexPattern.fromAngles(stroke, dir);
+                    ItemStack s = new ItemStack(ModItems.SQUARE);
+                    ModItems.SQUARE.writeDatum(s, new PatternIota(p));
+                    res.add(s, _s);
+                }
+                res.add(new ItemStack(ModItems.SQUARE), _s);
+                return List.of(res);
+            }
+        });
+        //focus
+        add(new BoardPaster() {
+            @Override
+            public boolean canHandle(ItemStack stack, ServerWorld world) {
+                return stack.isOf(HexItems.FOCUS);
+            }
+            @Override
+            public List<IItemStackMatcher> getResult(ItemStack stack, ServerWorld world) {
+                //unfinished
+                return List.of();
             }
         });
     }
