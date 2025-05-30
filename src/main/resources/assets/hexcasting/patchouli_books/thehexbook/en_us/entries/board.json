@@ -20,6 +20,26 @@
       "type": "patchouli:crafting",
       "recipe": "hexcreating:crafting_shaped/paper_reel",
       "text": "hexcreating.page.board.1"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "hexcreating.page.board.2"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "hexcreating.page.board.3"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "hexcreating.page.board.4"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "hexcreating.page.board.5"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "hexcreating.page.board.6"
     }
   ]
 }
