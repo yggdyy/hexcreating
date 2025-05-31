@@ -84,8 +84,8 @@ public class BoardBlock extends Block implements IBE<BoardBlockEntity>, IWrencha
             int condition = connected.condition;
             var pStack = playerEntity.getStackInHand(hand);
             var bStack = be.getStack(slot);
-            int todo = 0;
-            todo = switch (condition) {
+            /*int  = 0;
+             = switch (condition) {
                 case 0 -> SIMPLE_PUT | SIMPLE_REMOVE | SECTION_COPY | SECTION_PASTE; // default
                 case 1 -> SIMPLE_PUT | SECTION_REMOVE | SECTION_COPY | SECTION_PASTE; // bulk delete
                 case 2 -> SIMPLE_PUT | SECTION_LEFT | SECTION_COPY | SECTION_PASTE; // move left
@@ -94,119 +94,9 @@ public class BoardBlock extends Block implements IBE<BoardBlockEntity>, IWrencha
                 case 5 -> SIMPLE_PUT | SECTION_DOWN | SECTION_COPY | SECTION_PASTE;
                 case 15 -> SECTION_COPY; // static
                 default -> SECTION_COPY;
-            };
-            if((todo & SIMPLE_REMOVE) > 0) {
-                if(pStack.isEmpty() && !bStack.isEmpty()) {
-                    //playerEntity.giveItemStack(bStack.split(1));
-                    PlayerInventoryHelper.giveOrDrop(playerEntity, bStack.split(1));
-                    be.sync();
-                }
-            } if((todo & SECTION_REMOVE) > 0) {
-                if(pStack.isEmpty() && !bStack.isEmpty()) {
-                    BoardConnected.Section section = connected.getLeftAndRight(connected.getIndex(blockPos, slot));
-                    if(section != null) {
-                        for(int i = section.l; i <= section.r; ++i) {
-                            var nowStack = connected.getSlotHandler(i).getStack();
-                            if(nowStack.isEmpty()) continue;
-                            //playerEntity.giveItemStack(nowStack.copy());
-                            PlayerInventoryHelper.giveOrDrop(playerEntity, nowStack.copy());
-                            connected.getSlotHandler(i).setStack(ItemStack.EMPTY);
-                        }
-                    }
-                }
-            } if((todo & SECTION_LEFT) > 0) {
-                if(pStack.isEmpty() && !bStack.isEmpty()) {
-                    BoardConnected.Section section = connected.getLeft(connected.getIndex(blockPos, slot));
-                    if(section != null) {
-                        section.moveLeft();
-                    }
-                }
-            } if((todo & SECTION_RIGHT) > 0) {
-                if(pStack.isEmpty() && !bStack.isEmpty()) {
-                    BoardConnected.Section section = connected.getRight(connected.getIndex(blockPos, slot));
-                    if(section != null) {
-                        section.moveRight();
-                    }
-                }
-            } if((todo & SECTION_UP) > 0) {
-                if(pStack.isEmpty() && !bStack.isEmpty()) {
-                    BoardConnected.Section section = connected.getLeft(connected.getIndex(blockPos, slot));
-                    if(section != null) {
-                        int _s = connected.getSlotHandler(section.r).slot / 4;
-                        while(section.canMoveLeft() && connected.getSlotHandler(section.r).slot / 4 == _s) section.moveLeft();
-                    }
-                }
-            } if((todo & SECTION_DOWN) > 0) {
-                if(pStack.isEmpty() && !bStack.isEmpty()) {
-                    BoardConnected.Section section = connected.getRight(connected.getIndex(blockPos, slot));
-                    if(section != null) {
-                        int _s = connected.getSlotHandler(section.l).slot / 4;
-                        while(section.canMoveRight() && connected.getSlotHandler(section.l).slot / 4 == _s) section.moveRight();
-                    }
-                }
-            } if((todo & SECTION_COPY) > 0) {
-                if(pStack.isOf(ModItems.PAPER_REEL) && !bStack.isEmpty()) {
-                    BoardConnected.Section section = connected.getLeftAndRight(connected.getIndex(blockPos, slot));
-                    if(section != null) {
-                        List<Iota> iotas = section.getPatterns();
-                        if(iotas.size() > 0 && pStack.getMaxDamage() - pStack.getDamage() >= iotas.size() && ModItems.PAPER_REEL.getMedia(pStack) * 100L / MediaConstants.DUST_UNIT >= iotas.size()) {
-                            pStack.setDamage(pStack.getDamage() + iotas.size());
-                            ModItems.PAPER_REEL.setMedia(pStack, ModItems.PAPER_REEL.getMedia(pStack) - iotas.size() * MediaConstants.DUST_UNIT / 100L);
-                            ItemStack copied = ModItems.PRINTED_PAPER.getDefaultStack();
-                            ModItems.PRINTED_PAPER.writeDatum(copied, new ListIota(iotas));
-                            //playerEntity.giveItemStack(copied);
-                            PlayerInventoryHelper.giveOrDrop(playerEntity, copied);
-                        }
-                    }
-                }
-            } if((todo & SIMPLE_PUT) > 0) {
-                if(be.isItemStackLegal(pStack) && bStack.isEmpty()) {
-                    be.setStack(slot, pStack.split(1));
-                    be.sync();
-                }
-            } if((todo & SECTION_PASTE) > 0) {
-                for(var plaster : AllBoardPasters.pasters) {
-                    if(plaster.canHandle(pStack, (ServerWorld) world)) {
-                        var res = plaster.getResult(pStack, (ServerWorld) world);
-                        connected.genStorages();
-                        List<Storage<ItemVariant>> storages = new ArrayList<>(connected.storages);
-                        storages.add(PlayerInventoryStorage.of(playerEntity));
-                        for(int step = 0; step < res.size(); ++step) {
-                            var handler = connected.getSlotHandler(connected.getIndex(blockPos, slot) + step);
-                            var matcher = res.get(step);
-                            if(handler == null) {
-                                playerEntity.sendMessage(Text.translatable("hexcreating.board.paster.no_space", step));
-                                break;
-                            }
-                            if(handler.match(matcher)) continue;
-                            if(!handler.getStack().isEmpty()) {
-                                playerEntity.sendMessage(Text.translatable("hexcreating.board.paster.no_space", step));
-                                break;
-                            }
-                            var matches = matcher.get();
-                            boolean flag = false;
-                            for(var storage : storages) {
-                                for(var match : matches) {
-                                    try (Transaction tc = Transaction.openOuter()) {
-                                        long amount = storage.extract(ItemVariant.of(match.getLeft()), 1L, tc);
-                                        if(amount > 0) {
-                                            handler.setStack(match.getRight());
-                                            flag = true;
-                                            tc.commit();
-                                        }
-                                    }
-                                    if(flag) break;
-                                }
-                                if(flag) break;
-                            }
-                            if(!flag) {
-                                playerEntity.sendMessage(Text.translatable("hexcreating.board.paster.no_item", step));
-                                break;
-                            }
-                        }
-                        break;
-                    }
-                }
+            };*/
+            for(var operation : AllBoardOperations.operations) {
+                if(operation.operate((ServerWorld) world, blockPos, blockState, be, slot, bStack, connected, condition, playerEntity, pStack)) break;
             }
         }
         return ActionResult.PASS;

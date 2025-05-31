@@ -12,6 +12,7 @@ import net.minecraft.util.Identifier
 import pub.pigeon.yggdyy.hexcreating.HexcreatingMain
 import pub.pigeon.yggdyy.hexcreating.blocks.amethyst_lamp.AmethystLampBlock
 import pub.pigeon.yggdyy.hexcreating.blocks.analyticalengine.blocks.*
+import pub.pigeon.yggdyy.hexcreating.blocks.board.AllBoardOperations
 import pub.pigeon.yggdyy.hexcreating.blocks.board.AllBoardPasters
 import pub.pigeon.yggdyy.hexcreating.blocks.board.BoardBlock
 import pub.pigeon.yggdyy.hexcreating.blocks.circle_amplifier.CircleAmplifierBlock
@@ -54,5 +55,6 @@ object ModBlocks {
     }
     public fun init() {
         AllBoardPasters.init()
+        AllBoardOperations.init()
     }
 }
