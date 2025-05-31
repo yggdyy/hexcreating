@@ -9,6 +9,8 @@ public class ModEventListeners {
         ServerLivingEntityEvents.AFTER_DEATH.register(new AfterDeathEventListener());
         ServerLifecycleEvents.SERVER_STARTED.register(new ServerStartedEventListener());
         ServerLifecycleEvents.END_DATA_PACK_RELOAD.register(new EndDataPackReloadListener());
+    }
+    public static void initClient() {
         ClientTickEvents.END_WORLD_TICK.register(new EndClientWorldTickEventListener());
     }
 }

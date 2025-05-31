@@ -3,6 +3,8 @@ package pub.pigeon.yggdyy.hexcreating.patchouli.boardexplain;
 import at.petrak.hexcasting.api.casting.ActionRegistryEntry;
 import at.petrak.hexcasting.api.casting.math.HexPattern;
 import at.petrak.hexcasting.common.lib.hex.HexActions;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.util.Identifier;
@@ -16,6 +18,7 @@ import vazkii.patchouli.common.book.BookRegistry;
 import java.util.ArrayList;
 import java.util.List;
 
+@Environment(EnvType.CLIENT)
 public class AllPagesWithPattern {
     public static List<BookPage> pages = new ArrayList<>(List.of());
     public static List<ActionRegistryEntry> actions;

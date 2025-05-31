@@ -4,6 +4,8 @@ import at.petrak.hexcasting.api.casting.iota.PatternIota;
 import at.petrak.hexcasting.api.casting.math.HexPattern;
 import at.petrak.hexcasting.common.lib.HexItems;
 import at.petrak.hexcasting.common.lib.hex.HexIotaTypes;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.minecraft.block.BlockState;
@@ -23,6 +25,7 @@ import pub.pigeon.yggdyy.hexcreating.items.SquareItem;
 import pub.pigeon.yggdyy.hexcreating.patchouli.PatchouliUtils;
 import vazkii.patchouli.client.book.BookPage;
 
+@Environment(EnvType.CLIENT)
 public class BoardExplainHandler implements ClientTickEvents.EndTick, HudRenderCallback {
     private boolean shouldRender = false;
     private BookPage page = null;

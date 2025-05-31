@@ -22,6 +22,7 @@ import pub.pigeon.yggdyy.hexcreating.client.render.IotaWireConnectorRenderer;
 import pub.pigeon.yggdyy.hexcreating.client.render.IotaWriterRenderer;
 import pub.pigeon.yggdyy.hexcreating.create.ponder.ModPonderIndex;
 import pub.pigeon.yggdyy.hexcreating.fluids.ModFluids;
+import pub.pigeon.yggdyy.hexcreating.listeners.ModEventListeners;
 import pub.pigeon.yggdyy.hexcreating.patchouli.boardexplain.AllPagesWithPattern;
 import pub.pigeon.yggdyy.hexcreating.patchouli.boardexplain.BoardExplainHandler;
 
@@ -29,6 +30,9 @@ public class HexcreatingClient implements ClientModInitializer {
     public static Logger LOGGER = LoggerFactory.getLogger("hexcreating_client");
     @Override
     public void onInitializeClient() {
+        //events listeners
+        ModEventListeners.initClient();
+
         //custom models
         ModelLoadingPlugin.register(pluginContext -> {
             pluginContext.addModels(CircleAmplifierRenderer.MODEL_ID, BoardRenderer.SQUARE_ID);
