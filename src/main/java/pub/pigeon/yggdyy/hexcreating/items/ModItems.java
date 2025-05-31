@@ -3,11 +3,16 @@ package pub.pigeon.yggdyy.hexcreating.items;
 import com.simibubi.create.content.processing.sequenced.SequencedAssemblyItem;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.util.entry.ItemEntry;
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import pub.pigeon.yggdyy.hexcreating.HexcreatingMain;
+import pub.pigeon.yggdyy.hexcreating.blocks.ModBlocks;
+import pub.pigeon.yggdyy.hexcreating.fluids.ModFluids;
 
 public class ModItems {
     public static Item IOTA_WIRE_REEL = register("iota_wire_reel", new IotaWireReelItem(new Item.Settings()));
@@ -23,6 +28,7 @@ public class ModItems {
 
     public static void init() {
         CREATE_REGISTRATE.register();
+        Registry.register(Registries.ITEM_GROUP, new Identifier(HexcreatingMain.MOD_ID, "default"), HEXCREATING_GROUP);
     }
     public static <T extends Item> T register(String name, T item) {
         return Registry.register(Registries.ITEM, new Identifier(HexcreatingMain.MOD_ID, name), item);
@@ -39,4 +45,20 @@ public class ModItems {
     public static final ItemEntry<Item> THOUGHT_KEY_PATTERN_CONSTANTS = CREATE_REGISTRATE.item("thought_key/pattern_constants", Item::new).register();
     public static final ItemEntry<Item> THOUGHT_KEY_PATTERN_CALCULATE = CREATE_REGISTRATE.item("thought_key/pattern_calculate", Item::new).register();
     public static final ItemEntry<Item> THOUGHT_KEY_PATTERN_SPELL_1 = CREATE_REGISTRATE.item("thought_key/pattern_spell_1", Item::new).register();
+
+    public static final ItemGroup HEXCREATING_GROUP = FabricItemGroup.builder()
+            .icon(() -> ModFluids.MEDIA_BUCKET.getDefaultStack())
+            .displayName(Text.translatable("category.hexcreating.default"))
+            .entries((displayContext, entries) -> {
+                entries.add(ModFluids.MEDIA_BUCKET);
+                entries.add(ModBlocks.INSTANCE.getBOARD());
+                entries.add(SQUARE);
+                entries.add(EMPTY_REEL);
+                entries.add(PAPER_REEL);
+                entries.add(ModBlocks.INSTANCE.getAMETHYST_LAMP());
+                entries.add(ModBlocks.INSTANCE.getCIRCLE_AMPLIFIER());
+                entries.add(ModBlocks.INSTANCE.getTRAIN_GATE_CORE());
+                entries.add(ModBlocks.INSTANCE.getTRAIN_GATE_FRAME());
+            })
+            .build();
 }
