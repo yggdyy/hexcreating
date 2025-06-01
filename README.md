@@ -22,7 +22,7 @@ Amplify the casting circles' functional range with SU.
 New Patterns to lit blaze burner, get information about stress network and so on.  
 ### Train Gates  
 Make train fly (seriously).  
-[Video about train gates](https://www.bilibili.com/video/BV1h5ZqY3EP)  
+[Video about train gates](https://www.bilibili.com/video/BV1h5ZqY3EPP)  
 ### HexCasting Tutorial by Ponder  
 Now contains 4 ponders: HexCasting Introduction, Basic Iotas, Vectors, Stacks.  
 In the future there will be more.  
